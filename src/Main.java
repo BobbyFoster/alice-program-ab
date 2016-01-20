@@ -205,7 +205,7 @@ public class Main {
     }
 
     static class WebService extends NanoHTTPD {
-        Bot bot = new Bot("alice2", "/Users/bobby/alice-program-ab");
+        Bot bot = new Bot("alice2", ".");
         Chat chatSession = new Chat(bot);
 
         public WebService() {
@@ -220,7 +220,7 @@ public class Main {
 
         @Override
         public Response serve(IHTTPSession session) {
-            String q = session.getParms().get("q").replaceAll("[^a-zA-Z0-9?.!]", "");
+            String q = session.getParms().get("q").replaceAll("[^a-zA-Z0-9 ?.!]", "");
             System.out.println("query: " + q);
             return newFixedLengthResponse(chatSession.multisentenceRespond(q));
         }
