@@ -27,7 +27,8 @@ public class IntervalUtils {
 	// http://docs.oracle.com/javase/1.4.2/docs/api/java/text/SimpleDateFormat.html
 	public static int getHoursBetween(final String date1, final String date2, final String format) {
 		try {
-			final DateTimeFormatter fmt = DateTimeFormat.forPattern(format).withChronology(LenientChronology.getInstance(GregorianChronology.getInstance()));
+			final DateTimeFormatter fmt = DateTimeFormat.forPattern(format).withChronology(
+					LenientChronology.getInstance(GregorianChronology.getInstance()));
 			return Hours.hoursBetween(fmt.parseDateTime(date1), fmt.parseDateTime(date2)).getHours();
 		} catch (final Exception ex) {
 			ex.printStackTrace();
@@ -37,7 +38,8 @@ public class IntervalUtils {
 
 	public static int getYearsBetween(final String date1, final String date2, final String format) {
 		try {
-			final DateTimeFormatter fmt = DateTimeFormat.forPattern(format).withChronology(LenientChronology.getInstance(GregorianChronology.getInstance()));
+			final DateTimeFormatter fmt = DateTimeFormat.forPattern(format).withChronology(
+					LenientChronology.getInstance(GregorianChronology.getInstance()));
 			return Years.yearsBetween(fmt.parseDateTime(date1), fmt.parseDateTime(date2)).getYears();
 		} catch (final Exception ex) {
 			ex.printStackTrace();
@@ -47,7 +49,8 @@ public class IntervalUtils {
 
 	public static int getMonthsBetween(final String date1, final String date2, final String format) {
 		try {
-			final DateTimeFormatter fmt = DateTimeFormat.forPattern(format).withChronology(LenientChronology.getInstance(GregorianChronology.getInstance()));
+			final DateTimeFormatter fmt = DateTimeFormat.forPattern(format).withChronology(
+					LenientChronology.getInstance(GregorianChronology.getInstance()));
 			return Months.monthsBetween(fmt.parseDateTime(date1), fmt.parseDateTime(date2)).getMonths();
 		} catch (final Exception ex) {
 			ex.printStackTrace();
@@ -57,7 +60,8 @@ public class IntervalUtils {
 
 	public static int getDaysBetween(final String date1, final String date2, final String format) {
 		try {
-			final DateTimeFormatter fmt = DateTimeFormat.forPattern(format).withChronology(LenientChronology.getInstance(GregorianChronology.getInstance()));
+			final DateTimeFormatter fmt = DateTimeFormat.forPattern(format).withChronology(
+					LenientChronology.getInstance(GregorianChronology.getInstance()));
 			return Days.daysBetween(fmt.parseDateTime(date1), fmt.parseDateTime(date2)).getDays();
 		} catch (final Exception ex) {
 			ex.printStackTrace();

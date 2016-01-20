@@ -15,7 +15,8 @@ public class Tuple extends HashMap<String, String> {
 		// System.out.println("Calling equals");
 		// if (this == o) return true;
 		/*
-		 * if (o == null || getClass() != o.getClass()) { System.out.println("unequal 1"); return false; } if (!super.equals(o)) { System.out.println("unequal 2"); return false; }
+		 * if (o == null || getClass() != o.getClass()) { System.out.println("unequal 1"); return false;
+		 * } if (!super.equals(o)) { System.out.println("unequal 2"); return false; }
 		 */
 		final Tuple tuple = (Tuple) o;
 

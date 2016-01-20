@@ -101,7 +101,8 @@ public class Contact {
 		}
 	}
 
-	public Contact(final String displayName, final String phoneType, final String dialNumber, final String emailType, final String emailAddress, final String birthday) {
+	public Contact(final String displayName, final String phoneType, final String dialNumber,
+			final String emailType, final String emailAddress, final String birthday) {
 		contactId = "ID" + contactCount;
 		contactCount++;
 		phones = new HashMap<String, String>();

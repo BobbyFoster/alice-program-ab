@@ -61,12 +61,14 @@ public class PreProcessor {
 	public PreProcessor(final Bot bot) {
 
 		normalCount = readSubstitutions(bot.config_path + "/normal.txt", normalPatterns, normalSubs);
-		denormalCount = readSubstitutions(bot.config_path + "/denormal.txt", denormalPatterns, denormalSubs);
+		denormalCount = readSubstitutions(bot.config_path + "/denormal.txt", denormalPatterns,
+				denormalSubs);
 		personCount = readSubstitutions(bot.config_path + "/person.txt", personPatterns, personSubs);
 		person2Count = readSubstitutions(bot.config_path + "/person2.txt", person2Patterns, person2Subs);
 		genderCount = readSubstitutions(bot.config_path + "/gender.txt", genderPatterns, genderSubs);
 		if (MagicBooleans.trace_mode) {
-			System.out.println("Preprocessor: " + normalCount + " norms " + personCount + " persons " + person2Count + " person2 ");
+			System.out.println("Preprocessor: " + normalCount + " norms " + personCount + " persons "
+					+ person2Count + " person2 ");
 		}
 	}
 
@@ -149,7 +151,8 @@ public class PreProcessor {
 	 *            number of patterns and substitutions
 	 * @return result of applying substitutions to input
 	 */
-	String substitute(final String request, final Pattern[] patterns, final String[] subs, final int count) {
+	String substitute(final String request, final Pattern[] patterns, final String[] subs,
+			final int count) {
 		String result = " " + request + " ";
 		int index = 0;
 		try {
@@ -174,7 +177,8 @@ public class PreProcessor {
 			// System.out.println("Normalized: "+result);
 		} catch (final Exception ex) {
 			ex.printStackTrace();
-			System.out.println("Request " + request + " Result " + result + " at " + index + " " + patterns[index] + " " + subs[index]);
+			System.out.println("Request " + request + " Result " + result + " at " + index + " "
+					+ patterns[index] + " " + subs[index]);
 		}
 		return result.trim();
 	}
@@ -190,7 +194,8 @@ public class PreProcessor {
 	 *            array of substitution values
 	 * @return number of patterns substitutions read
 	 */
-	public int readSubstitutionsFromInputStream(final InputStream in, final Pattern[] patterns, final String[] subs) {
+	public int readSubstitutionsFromInputStream(final InputStream in, final Pattern[] patterns,
+			final String[] subs) {
 		final BufferedReader br = new BufferedReader(new InputStreamReader(in));
 		String strLine;
 		// Read File Line By Line

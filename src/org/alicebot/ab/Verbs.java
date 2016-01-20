@@ -7,9 +7,12 @@ import java.util.Set;
 public class Verbs {
 	static Set<String> es = Utilities.stringSet("sh", "ch", "th", "ss", "x");
 	static Set<String> ies = Utilities.stringSet("ly", "ry", "ny", "fy", "dy", "py");
-	static Set<String> ring = Utilities.stringSet("be", "me", "re", "se", "ve", "de", "le", "ce", "ze", "ke", "te", "ge", "ne", "pe", "ue");
-	static Set<String> bing = Utilities.stringSet("ab", "at", "op", "el", "in", "ur", "op", "er", "un", "in", "it", "et", "ut", "im", "id", "ol", "ig");
-	static Set<String> notBing = Utilities.stringSet("der", "eat", "ber", "ain", "sit", "ait", "uit", "eet", "ter", "lop", "ver", "wer", "aim", "oid", "eel", "out", "oin", "fer", "vel", "mit");
+	static Set<String> ring = Utilities.stringSet("be", "me", "re", "se", "ve", "de", "le", "ce", "ze",
+			"ke", "te", "ge", "ne", "pe", "ue");
+	static Set<String> bing = Utilities.stringSet("ab", "at", "op", "el", "in", "ur", "op", "er", "un",
+			"in", "it", "et", "ut", "im", "id", "ol", "ig");
+	static Set<String> notBing = Utilities.stringSet("der", "eat", "ber", "ain", "sit", "ait", "uit",
+			"eet", "ter", "lop", "ver", "wer", "aim", "oid", "eel", "out", "oin", "fer", "vel", "mit");
 
 	public static HashSet<String> irregular = new HashSet<String>();
 	public static HashMap<String, String> be2was = new HashMap<String, String>();
@@ -34,10 +37,10 @@ public class Verbs {
 		if (verb.endsWith("go")) {
 			return verb + "es";
 		}
-		if ((endsWith(verb, es)) != null) {
+		if (endsWith(verb, es) != null) {
 			return verb + "es";
 		}
-		if ((endsWith(verb, ies)) != null) {
+		if (endsWith(verb, ies) != null) {
 			return verb.substring(0, verb.length() - 1) + "ies";
 		}
 		return verb + "s";

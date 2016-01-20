@@ -24,7 +24,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Nodemapper data structure. In order to minimize memory overhead this class has no methods. Operations on Nodemapper objects are performed by NodemapperOperator class
+ * Nodemapper data structure. In order to minimize memory overhead this class has no methods. Operations
+ * on Nodemapper objects are performed by NodemapperOperator class
  */
 public class Nodemapper {
 	/*

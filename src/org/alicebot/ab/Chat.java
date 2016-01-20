@@ -178,12 +178,15 @@ public class Chat {
 	 * @return bot's reply
 	 */
 	String respond(String input, String that, final String topic, final History contextThatHistory) {
-		// MagicBooleans.trace("chat.respond(input: " + input + ", that: " + that + ", topic: " + topic + ", contextThatHistory: " + contextThatHistory + ")");
+		// MagicBooleans.trace("chat.respond(input: " + input + ", that: " + that + ", topic: " + topic
+		// +
+		// ", contextThatHistory: " + contextThatHistory + ")");
 		boolean repetition = true;
 		// inputHistory.printHistory();
 		for (int i = 0; i < MagicNumbers.repetition_count; i++) {
 			// System.out.println(request.toUpperCase()+"=="+inputHistory.get(i)+"? "+request.toUpperCase().equals(inputHistory.get(i)));
-			if (inputHistory.get(i) == null || !input.toUpperCase().equals(inputHistory.get(i).toUpperCase())) {
+			if (inputHistory.get(i) == null
+					|| !input.toUpperCase().equals(inputHistory.get(i).toUpperCase())) {
 				repetition = false;
 			}
 		}
@@ -219,7 +222,8 @@ public class Chat {
 	}
 
 	/**
-	 * Return bot response given an input and a history of "that" for the current conversational interaction
+	 * Return bot response given an input and a history of "that" for the current conversational
+	 * interaction
 	 *
 	 * @param input
 	 *            client input

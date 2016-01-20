@@ -49,12 +49,12 @@ public class JapaneseUtils {
 		while (result.contains("  ")) {
 			result = result.replace("  ", " ");
 		}
-		while (result.contains("anon "))
-		 {
+		while (result.contains("anon ")) {
 			result = result.replace("anon ", "anon"); // for Triple Store
 		}
 		result = result.trim();
-		// if (MagicBooleans.trace_mode) System.out.println("tokenizeSentence '"+sentence+"'-->'"+result+"'");
+		// if (MagicBooleans.trace_mode)
+		// System.out.println("tokenizeSentence '"+sentence+"'-->'"+result+"'");
 		return result;
 	}
 
@@ -119,13 +119,13 @@ public class JapaneseUtils {
 			for (int i = 0; i < XMLAttributes.getLength(); i++)
 
 			{
-				attributes += " " + XMLAttributes.item(i).getNodeName() + "=\"" + XMLAttributes.item(i).getNodeValue() + "\"";
+				attributes += " " + XMLAttributes.item(i).getNodeName() + "=\""
+						+ XMLAttributes.item(i).getNodeValue() + "\"";
 			}
 		}
 		if (result.equals("")) {
 			return " <" + nodeName + attributes + "/> ";
-		}
-		else {
+		} else {
 			return " <" + nodeName + attributes + ">" + result + "</" + nodeName + "> "; // add spaces
 		}
 	}

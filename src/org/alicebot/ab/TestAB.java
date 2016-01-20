@@ -41,7 +41,9 @@ public class TestAB {
 			} else {
 				final String request = textLine;
 				if (MagicBooleans.trace_mode) {
-					System.out.println("STATE=" + request + ":THAT=" + chatSession.thatHistory.get(0).get(0) + ":TOPIC=" + chatSession.predicates.get("topic"));
+					System.out.println("STATE=" + request + ":THAT="
+							+ chatSession.thatHistory.get(0).get(0) + ":TOPIC="
+							+ chatSession.predicates.get("topic"));
 				}
 				String response = chatSession.multisentenceRespond(request);
 				while (response.contains("&lt;")) {
@@ -72,13 +74,17 @@ public class TestAB {
 	public static void runTests(final Bot bot, final boolean traceMode) {
 		MagicBooleans.qa_test_mode = true;
 		final Chat chatSession = new Chat(bot, false);
-		// bot.preProcessor.normalizeFile("c:/ab/bots/super/aiml/thats.txt", "c:/ab/bots/super/aiml/normalthats.txt");
+		// bot.preProcessor.normalizeFile("c:/ab/bots/super/aiml/thats.txt",
+		// "c:/ab/bots/super/aiml/normalthats.txt");
 		bot.brain.nodeStats();
 		MagicBooleans.trace_mode = traceMode;
-		final IOUtils testInput = new IOUtils(MagicStrings.root_path + "/data/lognormal-500.txt", "read");
+		final IOUtils testInput = new IOUtils(MagicStrings.root_path + "/data/lognormal-500.txt",
+				"read");
 		// IOUtils testInput = new IOUtils(MagicStrings.root_path + "/data/callmom-inputs.txt", "read");
-		final IOUtils testOutput = new IOUtils(MagicStrings.root_path + "/data/lognormal-500-out.txt", "write");
-		// IOUtils testOutput = new IOUtils(MagicStrings.root_path + "/data/callmom-outputs.txt", "write");
+		final IOUtils testOutput = new IOUtils(MagicStrings.root_path + "/data/lognormal-500-out.txt",
+				"write");
+		// IOUtils testOutput = new IOUtils(MagicStrings.root_path + "/data/callmom-outputs.txt",
+		// "write");
 		String textLine = testInput.readLine();
 		int i = 1;
 		System.out.print(0);
@@ -100,7 +106,9 @@ public class TestAB {
 			} else {
 				final String request = textLine;
 				if (MagicBooleans.trace_mode) {
-					System.out.println("STATE=" + request + ":THAT=" + chatSession.thatHistory.get(0).get(0) + ":TOPIC=" + chatSession.predicates.get("topic"));
+					System.out.println("STATE=" + request + ":THAT="
+							+ chatSession.thatHistory.get(0).get(0) + ":TOPIC="
+							+ chatSession.predicates.get("topic"));
 				}
 				String response = chatSession.multisentenceRespond(request);
 				while (response.contains("&lt;")) {

@@ -71,7 +71,8 @@ public class AB {
 	}
 
 	/**
-	 * Calculates the botmaster's productivity rate in categories/sec when using Pattern Suggestor to create content.
+	 * Calculates the botmaster's productivity rate in categories/sec when using Pattern Suggestor to
+	 * create content.
 	 *
 	 * @param runCompletedCnt
 	 *            number of categories completed in this run
@@ -82,20 +83,23 @@ public class AB {
 
 	public void productivity(final int runCompletedCnt, final Timer timer) {
 		final float time = timer.elapsedTimeMins();
-		System.out.println("Completed " + runCompletedCnt + " in " + time + " min. Productivity " + runCompletedCnt / time + " cat/min");
+		System.out.println("Completed " + runCompletedCnt + " in " + time + " min. Productivity "
+				+ runCompletedCnt / time + " cat/min");
 	}
 
 	public void readDeletedIFCategories() {
 		bot.readCertainIFCategories(deletedGraph, MagicStrings.deleted_aiml_file);
 		if (MagicBooleans.trace_mode) {
-			System.out.println("--- DELETED CATEGORIES -- read " + deletedGraph.getCategories().size() + " deleted categories");
+			System.out.println("--- DELETED CATEGORIES -- read " + deletedGraph.getCategories().size()
+					+ " deleted categories");
 		}
 	}
 
 	public void writeDeletedIFCategories() {
 		System.out.println("--- DELETED CATEGORIES -- write");
 		bot.writeCertainIFCategories(deletedGraph, MagicStrings.deleted_aiml_file);
-		System.out.println("--- DELETED CATEGORIES -- write " + deletedGraph.getCategories().size() + " deleted categories");
+		System.out.println("--- DELETED CATEGORIES -- write " + deletedGraph.getCategories().size()
+				+ " deleted categories");
 
 	}
 
@@ -148,7 +152,9 @@ public class AB {
 	 */
 	public void skipCategory(final Category c) {
 		/*
-		 * c.setFilename(MagicStrings.unfinished_aiml_file); c.setTemplate(MagicStrings.unfinished_template); bot.unfinishedGraph.addCategory(c); System.out.println(bot.unfinishedGraph.getCategories().size() + " unfinished categories");
+		 * c.setFilename(MagicStrings.unfinished_aiml_file);
+		 * c.setTemplate(MagicStrings.unfinished_template); bot.unfinishedGraph.addCategory(c);
+		 * System.out.println(bot.unfinishedGraph.getCategories().size() + " unfinished categories");
 		 * bot.writeUnfinishedIFCategories();
 		 */
 	}
@@ -179,7 +185,8 @@ public class AB {
 			// Read File Line By Line
 			while ((strLine = br.readLine()) != null && count < limit) {
 				// strLine = preProcessor.normalize(strLine);
-				final Category c = new Category(0, strLine, "*", "*", "nothing", MagicStrings.unknown_aiml_file);
+				final Category c = new Category(0, strLine, "*", "*", "nothing",
+						MagicStrings.unknown_aiml_file);
 				final Nodemapper node = inputGraph.findNode(c);
 				if (node == null) {
 					inputGraph.addCategory(c);
@@ -221,7 +228,8 @@ public class AB {
 		if (NodemapperOperator.isLeaf(node)) {
 			// System.out.println("LEAF: "+node.category.getActivationCnt()+". "+partialPatternThatTopic);
 			if (node.category.getActivationCnt() > MagicNumbers.node_activation_cnt) {
-				// System.out.println("LEAF: "+node.category.getActivationCnt()+". "+partialPatternThatTopic+" "+node.shortCut); //Start writing to the output stream
+				// System.out.println("LEAF: "+node.category.getActivationCnt()+". "+partialPatternThatTopic+" "+node.shortCut);
+				// //Start writing to the output stream
 				leafPatternCnt++;
 				try {
 					String categoryPatternThatTopic = "";
@@ -231,10 +239,18 @@ public class AB {
 					} else {
 						categoryPatternThatTopic = partialPatternThatTopic;
 					}
-					final Category c = new Category(0, categoryPatternThatTopic, MagicStrings.blank_template, MagicStrings.unknown_aiml_file);
+					final Category c = new Category(0, categoryPatternThatTopic,
+							MagicStrings.blank_template, MagicStrings.unknown_aiml_file);
 					// if (brain.existsCategory(c)) System.out.println(c.inputThatTopic()+" Exists");
-					// if (deleted.existsCategory(c)) System.out.println(c.inputThatTopic()+ " Deleted");
-					if (!bot.brain.existsCategory(c) && !deletedGraph.existsCategory(c)/* && !unfinishedGraph.existsCategory(c) */) {
+					// if (deleted.existsCategory(c)) System.out.println(c.inputThatTopic()+
+					// " Deleted");
+					if (!bot.brain.existsCategory(c) && !deletedGraph.existsCategory(c)/*
+																						 * &&
+																						 * !unfinishedGraph
+																						 * .
+																						 * existsCategory
+																						 * (c)
+																						 */) {
 						patternGraph.addCategory(c);
 						suggestedCategories.add(c);
 					}
@@ -247,10 +263,16 @@ public class AB {
 			// System.out.println("STAR: "+NodemapperOperator.size(node)+". "+partialPatternThatTopic+" * <that> * <topic> *");
 			starPatternCnt++;
 			try {
-				final Category c = new Category(0, partialPatternThatTopic + " * <THAT> * <TOPIC> *", MagicStrings.blank_template, MagicStrings.unknown_aiml_file);
+				final Category c = new Category(0, partialPatternThatTopic + " * <THAT> * <TOPIC> *",
+						MagicStrings.blank_template, MagicStrings.unknown_aiml_file);
 				// if (brain.existsCategory(c)) System.out.println(c.inputThatTopic()+" Exists");
 				// if (deleted.existsCategory(c)) System.out.println(c.inputThatTopic()+ " Deleted");
-				if (!bot.brain.existsCategory(c) && !deletedGraph.existsCategory(c)/* && !unfinishedGraph.existsCategory(c) */) {
+				if (!bot.brain.existsCategory(c) && !deletedGraph.existsCategory(c)/*
+																					 * &&
+																					 * !unfinishedGraph
+																					 * .
+																					 * existsCategory(c)
+																					 */) {
 					patternGraph.addCategory(c);
 					suggestedCategories.add(c);
 				}
@@ -317,8 +339,9 @@ public class AB {
 	}
 
 	/**
-	 * magically suggests new patterns for a bot. Reads an input file of sample data called logFile. Builds a graph of all the inputs. Finds new patterns in the graph that are not already in the bot. Classifies input log into those new
-	 * patterns.
+	 * magically suggests new patterns for a bot. Reads an input file of sample data called logFile.
+	 * Builds a graph of all the inputs. Finds new patterns in the graph that are not already in the
+	 * bot. Classifies input log into those new patterns.
 	 *
 	 *
 	 *
@@ -362,10 +385,9 @@ public class AB {
 	public ArrayList<Category> nonZeroActivationCount(final ArrayList<Category> suggestedCategories) {
 		final ArrayList<Category> result = new ArrayList<Category>();
 		for (final Category c : suggestedCategories) {
-			if (c.getActivationCnt() > 0)
-			 {
+			if (c.getActivationCnt() > 0) {
 				result.add(c);
-			// else System.out.println("["+c.getActivationCnt()+"] "+c.inputThatTopic());
+				// else System.out.println("["+c.getActivationCnt()+"] "+c.inputThatTopic());
 			}
 		}
 
@@ -417,7 +439,8 @@ public class AB {
 			try {
 				final ArrayList samples = new ArrayList(c.getMatches(bot));
 				Collections.shuffle(samples);
-				final int sampleSize = Math.min(MagicNumbers.displayed_input_sample_size, c.getMatches(bot).size());
+				final int sampleSize = Math.min(MagicNumbers.displayed_input_sample_size,
+						c.getMatches(bot).size());
 				for (int i = 0; i < sampleSize; i++) {
 					System.out.println("" + samples.get(i));
 				}
@@ -467,7 +490,8 @@ public class AB {
 	 * @param c
 	 *            AIML category selected
 	 */
-	public void terminalInteractionStep(final Bot bot, final String request, String textLine, final Category c, final String alicetemplate) {
+	public void terminalInteractionStep(final Bot bot, final String request, String textLine,
+			final Category c, final String alicetemplate) {
 		String template = null;
 		if (textLine.contains("<pattern>") && textLine.contains("</pattern>")) {
 			final int index = textLine.indexOf("<pattern>") + "<pattern>".length();
@@ -485,7 +509,8 @@ public class AB {
 		for (final String p : pronouns) {
 			if (textLine.contains("<" + p + ">")) {
 				textLine = textLine.replace("<" + p + ">", "");
-				botThinks = "<think><set name=\"" + p + "\"><set name=\"topic\"><star/></set></set></think>";
+				botThinks = "<think><set name=\"" + p
+						+ "\"><set name=\"topic\"><star/></set></set></think>";
 			}
 		}
 		if (textLine.equals("q")) {
@@ -493,12 +518,20 @@ public class AB {
 		} else if (textLine.equals("wq")) { // Write AIML Files and quit program
 			bot.writeQuit();
 			/*
-			 * Nodemapper udcNode = bot.brain.findNode("*", "*", "*"); if (udcNode != null) { AIMLSet udcMatches = new AIMLSet("udcmatches"); udcMatches.addAll(udcNode.category.getMatches()); udcMatches.writeAIMLSet(); }
+			 * Nodemapper udcNode = bot.brain.findNode("*", "*", "*"); if (udcNode != null) { AIMLSet
+			 * udcMatches = new AIMLSet("udcmatches"); udcMatches.addAll(udcNode.category.getMatches());
+			 * udcMatches.writeAIMLSet(); }
 			 */
 			/*
-			 * Nodemapper cNode = bot.brain.match("JOE MAKES BEER", "unknown", "unknown"); if (cNode != null) { AIMLSet cMatches = new AIMLSet("cmatches"); cMatches.addAll(cNode.category.getMatches()); cMatches.writeAIMLSet(); } if
-			 * (passed.size() > 0) { AIMLSet difference = new AIMLSet("difference"); AIMLSet intersection = new AIMLSet("intersection"); for (String s : passed) if (testSet.contains(s)) intersection.add(s); passed = intersection;
-			 * passed.setName = "passed"; difference.addAll(testSet); difference.removeAll(passed); difference.writeAIMLSet(); passed.writeAIMLSet(); testSet.writeAIMLSet(); System.out.println("Wrote passed test cases"); }
+			 * Nodemapper cNode = bot.brain.match("JOE MAKES BEER", "unknown", "unknown"); if (cNode !=
+			 * null) { AIMLSet cMatches = new AIMLSet("cmatches");
+			 * cMatches.addAll(cNode.category.getMatches()); cMatches.writeAIMLSet(); } if
+			 * (passed.size() > 0) { AIMLSet difference = new AIMLSet("difference"); AIMLSet
+			 * intersection = new AIMLSet("intersection"); for (String s : passed) if
+			 * (testSet.contains(s)) intersection.add(s); passed = intersection; passed.setName =
+			 * "passed"; difference.addAll(testSet); difference.removeAll(passed);
+			 * difference.writeAIMLSet(); passed.writeAIMLSet(); testSet.writeAIMLSet();
+			 * System.out.println("Wrote passed test cases"); }
 			 */
 			System.exit(0);
 		} else if (textLine.equals("skip") || textLine.equals("")) { // skip this one for now
@@ -522,7 +555,8 @@ public class AB {
 		} else if (textLine.equals("d")) { // delete this suggested category
 			deleteCategory(c);
 		} else if (textLine.equals("x")) { // ask another bot
-			template = "<sraix services=\"pannous\">" + c.getPattern().replace("*", "<star/>") + "</sraix>";
+			template = "<sraix services=\"pannous\">" + c.getPattern().replace("*", "<star/>")
+					+ "</sraix>";
 			template += botThinks;
 			saveCategory(c.getPattern(), template, MagicStrings.sraix_aiml_file);
 		} else if (textLine.equals("p")) { // filter inappropriate content

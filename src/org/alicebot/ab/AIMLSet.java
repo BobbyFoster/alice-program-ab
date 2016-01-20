@@ -142,7 +142,8 @@ public class AIMLSet extends HashSet<String> {
 					add(strLine.trim());
 				}
 				/*
-				 * Category c = new Category(0, "ISA"+setName.toUpperCase()+" "+strLine.toUpperCase(), "*", "*", "true", MagicStrings.null_aiml_file); bot.brain.addCategory(c);
+				 * Category c = new Category(0, "ISA"+setName.toUpperCase()+" "+strLine.toUpperCase(),
+				 * "*", "*", "true", MagicStrings.null_aiml_file); bot.brain.addCategory(c);
 				 */
 			}
 		} catch (final Exception ex) {
@@ -161,7 +162,8 @@ public class AIMLSet extends HashSet<String> {
 			// command line parameter
 			final File file = new File(bot.sets_path + "/" + setName + ".txt");
 			if (file.exists()) {
-				final FileInputStream fstream = new FileInputStream(bot.sets_path + "/" + setName + ".txt");
+				final FileInputStream fstream = new FileInputStream(bot.sets_path + "/" + setName
+						+ ".txt");
 				// Get the object
 				cnt = readAIMLSetFromInputStream(fstream, bot);
 				fstream.close();

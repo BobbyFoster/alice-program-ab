@@ -19,9 +19,11 @@ public class NetworkUtils {
 
 	public static String localIPAddress() {
 		try {
-			for (final Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
+			for (final Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en
+					.hasMoreElements();) {
 				final NetworkInterface intf = en.nextElement();
-				for (final Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
+				for (final Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr
+						.hasMoreElements();) {
 					final InetAddress inetAddress = enumIpAddr.nextElement();
 					if (!inetAddress.isLoopbackAddress()) {
 						String ipAddress = inetAddress.getHostAddress().toString();
@@ -29,7 +31,8 @@ public class NetworkUtils {
 						if (p > 0) {
 							ipAddress = ipAddress.substring(0, p);
 						}
-						// if (MagicBooleans.trace_mode) System.out.println("--> localIPAddress = "+ipAddress);
+						// if (MagicBooleans.trace_mode)
+						// System.out.println("--> localIPAddress = "+ipAddress);
 						return ipAddress;
 					}
 				}
@@ -57,16 +60,31 @@ public class NetworkUtils {
 	}
 
 	/*
-	 * public static String responseContent(String url) throws Exception { String result=""; // Prepare a request object HttpGet httpget = new HttpGet(); httpget.setURI(new URI(url)); HttpParams httpParameters = new BasicHttpParams(); //
-	 * Set the timeout in milliseconds until a connection is established. // The default value is zero, that means the timeout is not used. int timeoutConnection = 3000; HttpConnectionParams.setConnectionTimeout(httpParameters,
-	 * timeoutConnection); // Set the default socket timeout (SO_TIMEOUT) // in milliseconds which is the timeout for waiting for data. int timeoutSocket = 5000; HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket); HttpClient
-	 * httpclient = new DefaultHttpClient(httpParameters); // Execute the request HttpResponse response = httpclient.execute(httpget); // Examine the response status System.out.println(response.getStatusLine()); // Get hold of the response
-	 * entity HttpEntity entity = response.getEntity(); // If the response does not enclose an entity, there is no need // to worry about connection release if (entity != null) { InputStream is = entity.getContent(); try { BufferedReader
-	 * inb = new BufferedReader(new InputStreamReader(is)); StringBuilder sb = new StringBuilder(""); String line; String NL = System.getProperty("line.separator"); while ((line = inb.readLine()) != null) { sb.append(line).append(NL); }
-	 * inb.close(); result = sb.toString(); BufferedReader reader = new BufferedReader( new InputStreamReader(is)); // do something useful with the response System.out.println(reader.readLine()); } catch (IOException ex) { // In case of an
-	 * IOException the connection will be released // back to the connection manager automatically throw ex; } catch (RuntimeException ex) { // In case of an unexpected exception you may want to abort // the HTTP request in order to shut
-	 * down the underlying // connection and release it back to the connection manager. httpget.abort(); throw ex; } finally { // Closing the input stream will trigger connection release is.close(); } // When HttpClient instance is no
-	 * longer needed, // shut down the connection manager to ensure // immediate deallocation of all system resources httpclient.getConnectionManager().shutdown(); } return result; }
+	 * public static String responseContent(String url) throws Exception { String result=""; // Prepare
+	 * a request object HttpGet httpget = new HttpGet(); httpget.setURI(new URI(url)); HttpParams
+	 * httpParameters = new BasicHttpParams(); // Set the timeout in milliseconds until a connection is
+	 * established. // The default value is zero, that means the timeout is not used. int
+	 * timeoutConnection = 3000; HttpConnectionParams.setConnectionTimeout(httpParameters,
+	 * timeoutConnection); // Set the default socket timeout (SO_TIMEOUT) // in milliseconds which is
+	 * the timeout for waiting for data. int timeoutSocket = 5000;
+	 * HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket); HttpClient httpclient = new
+	 * DefaultHttpClient(httpParameters); // Execute the request HttpResponse response =
+	 * httpclient.execute(httpget); // Examine the response status
+	 * System.out.println(response.getStatusLine()); // Get hold of the response entity HttpEntity
+	 * entity = response.getEntity(); // If the response does not enclose an entity, there is no need //
+	 * to worry about connection release if (entity != null) { InputStream is = entity.getContent(); try
+	 * { BufferedReader inb = new BufferedReader(new InputStreamReader(is)); StringBuilder sb = new
+	 * StringBuilder(""); String line; String NL = System.getProperty("line.separator"); while ((line =
+	 * inb.readLine()) != null) { sb.append(line).append(NL); } inb.close(); result = sb.toString();
+	 * BufferedReader reader = new BufferedReader( new InputStreamReader(is)); // do something useful
+	 * with the response System.out.println(reader.readLine()); } catch (IOException ex) { // In case of
+	 * an IOException the connection will be released // back to the connection manager automatically
+	 * throw ex; } catch (RuntimeException ex) { // In case of an unexpected exception you may want to
+	 * abort // the HTTP request in order to shut down the underlying // connection and release it back
+	 * to the connection manager. httpget.abort(); throw ex; } finally { // Closing the input stream
+	 * will trigger connection release is.close(); } // When HttpClient instance is no longer needed, //
+	 * shut down the connection manager to ensure // immediate deallocation of all system resources
+	 * httpclient.getConnectionManager().shutdown(); } return result; }
 	 */
 	public static String responseContentUri(final URI uri) throws Exception {
 		final HttpClient client = new DefaultHttpClient();
@@ -84,15 +102,18 @@ public class NetworkUtils {
 		return sb.toString();
 	}
 
-	public static String spec(final String host, final String botid, final String custid, final String input) {
+	public static String spec(final String host, final String botid, final String custid,
+			final String input) {
 		// System.out.println("--> custid = "+custid);
 		String spec = "";
 		try {
 			if (custid.equals("0")) {
-				spec = String.format("%s?botid=%s&input=%s", "http://" + host + "/pandora/talk-xml", botid, URLEncoder.encode(input, "UTF-8"));
+				spec = String.format("%s?botid=%s&input=%s", "http://" + host + "/pandora/talk-xml",
+						botid, URLEncoder.encode(input, "UTF-8"));
 			} else {
 				spec = // re-use custid on each subsequent interaction
-				String.format("%s?botid=%s&custid=%s&input=%s", "http://" + host + "/pandora/talk-xml", botid, custid, URLEncoder.encode(input, "UTF-8"));
+				String.format("%s?botid=%s&custid=%s&input=%s", "http://" + host + "/pandora/talk-xml",
+						botid, custid, URLEncoder.encode(input, "UTF-8"));
 			}
 		} catch (final Exception ex) {
 			ex.printStackTrace();

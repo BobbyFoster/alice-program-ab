@@ -26,10 +26,12 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 /**
- * This is just a stub to make the contactaction.aiml file work on a PC with some extension tags that are defined for mobile devices.
+ * This is just a stub to make the contactaction.aiml file work on a PC with some extension tags that
+ * are defined for mobile devices.
  */
 public class PCAIMLProcessorExtension implements AIMLProcessorExtension {
-	public Set<String> extensionTagNames = Utilities.stringSet("contactid", "multipleids", "displayname", "dialnumber", "emailaddress", "contactbirthday", "addinfo");
+	public Set<String> extensionTagNames = Utilities.stringSet("contactid", "multipleids",
+			"displayname", "dialnumber", "emailaddress", "contactbirthday", "addinfo");
 
 	@Override
 	public Set<String> extensionTagSet() {
@@ -64,7 +66,8 @@ public class PCAIMLProcessorExtension implements AIMLProcessorExtension {
 				emailAddress = AIMLProcessor.evalTagContent(childList.item(i), ps, null);
 			}
 		}
-		System.out.println("Adding new contact " + displayName + " " + phoneType + " " + dialNumber + " " + emailType + " " + emailAddress + " " + birthday);
+		System.out.println("Adding new contact " + displayName + " " + phoneType + " " + dialNumber
+				+ " " + emailType + " " + emailAddress + " " + birthday);
 		new Contact(displayName, phoneType, dialNumber, emailType, emailAddress, birthday);
 		return "";
 	}

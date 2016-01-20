@@ -31,7 +31,8 @@ import java.util.HashMap;
 /**
  * implements AIML Map
  *
- * A map is a function from one string set to another. Elements of the domain are called keys and elements of the range are called values.
+ * A map is a function from one string set to another. Elements of the domain are called keys and
+ * elements of the range are called values.
  *
  */
 public class AIMLMap extends HashMap<String, String> {
@@ -84,7 +85,8 @@ public class AIMLMap extends HashMap<String, String> {
 		} else if (isExternal && MagicBooleans.enable_external_sets) {
 			// String[] split = key.split(" ");
 			final String query = mapName.toUpperCase() + " " + key;
-			final String response = Sraix.sraix(null, query, MagicStrings.default_map, null, host, botid, null, "0");
+			final String response = Sraix.sraix(null, query, MagicStrings.default_map, null, host,
+					botid, null, "0");
 			System.out.println("External " + mapName + "(" + key + ")=" + response);
 			value = response;
 		} else {
@@ -180,7 +182,8 @@ public class AIMLMap extends HashMap<String, String> {
 			// command line parameter
 			final File file = new File(bot.maps_path + "/" + mapName + ".txt");
 			if (file.exists()) {
-				final FileInputStream fstream = new FileInputStream(bot.maps_path + "/" + mapName + ".txt");
+				final FileInputStream fstream = new FileInputStream(bot.maps_path + "/" + mapName
+						+ ".txt");
 				// Get the object
 				cnt = readAIMLMapFromInputStream(fstream, bot);
 				fstream.close();

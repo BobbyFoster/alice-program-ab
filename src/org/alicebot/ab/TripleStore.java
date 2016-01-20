@@ -196,7 +196,8 @@ public class TripleStore {
 		Set<String> objectSet;
 		Set<String> resultSet;
 		if (MagicBooleans.trace_mode) {
-			System.out.println("TripleStore: getTriples [" + idTriple.size() + "] " + s + ":" + p + ":" + o);
+			System.out.println("TripleStore: getTriples [" + idTriple.size() + "] " + s + ":" + p + ":"
+					+ o);
 		}
 		// printAllTriples();
 		if (s == null || s.startsWith("?")) {
@@ -244,7 +245,10 @@ public class TripleStore {
 
 		// System.out.println("TripleStore.getTriples: "+finalResultSet.size()+" results");
 		/*
-		 * System.out.println("getTriples subjectSet="+subjectSet); System.out.println("getTriples predicateSet="+predicateSet); System.out.println("getTriples objectSet="+objectSet); System.out.println("getTriples result="+resultSet);
+		 * System.out.println("getTriples subjectSet="+subjectSet);
+		 * System.out.println("getTriples predicateSet="+predicateSet);
+		 * System.out.println("getTriples objectSet="+objectSet);
+		 * System.out.println("getTriples result="+resultSet);
 		 */
 
 		return finalResultSet;
@@ -320,7 +324,8 @@ public class TripleStore {
 		}
 	}
 
-	public HashSet<Tuple> select(final HashSet<String> vars, final HashSet<String> visibleVars, final ArrayList<Clause> clauses) {
+	public HashSet<Tuple> select(final HashSet<String> vars, final HashSet<String> visibleVars,
+			final ArrayList<Clause> clauses) {
 		HashSet<Tuple> result = new HashSet<Tuple>();
 		try {
 
@@ -349,19 +354,28 @@ public class TripleStore {
 		final Clause newClause = new Clause(clause);
 		if (vars.contains(subj)) {
 			final String value = tuple.getValue(subj);
-			if (!value.equals(MagicStrings.unbound_variable)) {/* System.out.println("adjusting "+subj+" "+value); */
+			if (!value.equals(MagicStrings.unbound_variable)) {/*
+																 * System.out.println("adjusting "+subj+" "
+																 * +value);
+																 */
 				newClause.subj = value;
 			}
 		}
 		if (vars.contains(pred)) {
 			final String value = tuple.getValue(pred);
-			if (!value.equals(MagicStrings.unbound_variable)) {/* System.out.println("adjusting "+pred+" "+value); */
+			if (!value.equals(MagicStrings.unbound_variable)) {/*
+																 * System.out.println("adjusting "+pred+" "
+																 * +value);
+																 */
 				newClause.pred = value;
 			}
 		}
 		if (vars.contains(obj)) {
 			final String value = tuple.getValue(obj);
-			if (!value.equals(MagicStrings.unbound_variable)) {/* System.out.println("adjusting "+obj+" "+value); */
+			if (!value.equals(MagicStrings.unbound_variable)) {/*
+																 * System.out.println("adjusting "+obj+" "
+																 * +value);
+																 */
 				newClause.obj = value;
 			}
 		}
@@ -383,7 +397,8 @@ public class TripleStore {
 		return tuple;
 	}
 
-	public HashSet<Tuple> selectFromSingleClause(final Tuple partial, final Clause clause, final Boolean affirm) {
+	public HashSet<Tuple> selectFromSingleClause(final Tuple partial, final Clause clause,
+			final Boolean affirm) {
 		final HashSet<Tuple> result = new HashSet<Tuple>();
 		final HashSet<String> triples = getTriples(clause.subj, clause.pred, clause.obj);
 		// System.out.println("TripleStore: selected "+triples.size()+" from single clause "+clause.subj+" "+clause.pred+" "+clause.obj);
@@ -400,7 +415,8 @@ public class TripleStore {
 		return result;
 	}
 
-	public HashSet<Tuple> selectFromRemainingClauses(final Tuple partial, final ArrayList<Clause> clauses) {
+	public HashSet<Tuple> selectFromRemainingClauses(final Tuple partial,
+			final ArrayList<Clause> clauses) {
 		// System.out.println("TripleStore: partial = "+partial.printTuple()+" clauses.size()=="+clauses.size());
 		HashSet<Tuple> result = new HashSet<Tuple>();
 		Clause clause = clauses.get(0);

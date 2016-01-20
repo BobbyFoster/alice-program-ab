@@ -198,7 +198,8 @@ public class Main {
 				if (word != null && gloss != null) {
 					word = word.toLowerCase().trim();
 					if (gloss.length() > 2) {
-						gloss = gloss.substring(0, 1).toUpperCase() + gloss.substring(1, gloss.length());
+						gloss = gloss.substring(0, 1).toUpperCase()
+								+ gloss.substring(1, gloss.length());
 					}
 					String definition;
 					if (def.keySet().contains(word)) {
@@ -212,7 +213,8 @@ public class Main {
 					gloss = null;
 				}
 			}
-			final Category d = new Category(0, "WNDEF *", "*", "*", "unknown", "wndefs" + filecnt + ".aiml");
+			final Category d = new Category(0, "WNDEF *", "*", "*", "unknown", "wndefs" + filecnt
+					+ ".aiml");
 			bot.brain.addCategory(d);
 			for (final String x : def.keySet()) {
 				word = x;
@@ -222,8 +224,10 @@ public class Main {
 					filecnt++;
 				}
 
-				final Category c = new Category(0, "WNDEF " + word, "*", "*", gloss, "wndefs" + filecnt + ".aiml");
-				System.out.println(cnt + " " + filecnt + " " + c.inputThatTopic() + ":" + c.getTemplate() + ":" + c.getFilename());
+				final Category c = new Category(0, "WNDEF " + word, "*", "*", gloss, "wndefs" + filecnt
+						+ ".aiml");
+				System.out.println(cnt + " " + filecnt + " " + c.inputThatTopic() + ":"
+						+ c.getTemplate() + ":" + c.getFilename());
 				Nodemapper node;
 				if ((node = bot.brain.findNode(c)) != null) {
 					node.category.setTemplate(node.category.getTemplate() + "," + gloss);

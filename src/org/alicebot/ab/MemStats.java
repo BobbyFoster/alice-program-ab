@@ -45,7 +45,8 @@ public class MemStats {
 		final long heapFreeSize = MemoryUtils.freeMemory();
 		final long diff = heapSize - prevHeapSize;
 		prevHeapSize = heapSize;
-		System.out.println("Heap " + heapSize + " MaxSize " + heapMaxSize + " Free " + heapFreeSize + " Diff " + diff);
+		System.out.println("Heap " + heapSize + " MaxSize " + heapMaxSize + " Free " + heapFreeSize
+				+ " Diff " + diff);
 
 	}
 

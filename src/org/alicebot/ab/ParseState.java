@@ -48,7 +48,8 @@ public class ParseState {
 	 * @param leaf
 	 *            node containing the category processed
 	 */
-	public ParseState(final int depth, final Chat chatSession, final String input, final String that, final String topic, final Nodemapper leaf) {
+	public ParseState(final int depth, final Chat chatSession, final String input, final String that,
+			final String topic, final Nodemapper leaf) {
 		this.chatSession = chatSession;
 		this.input = input;
 		this.that = that;

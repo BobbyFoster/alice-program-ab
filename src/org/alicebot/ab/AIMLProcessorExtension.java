@@ -27,7 +27,8 @@ import org.w3c.dom.Node;
 /**
  * The interface needed to implement AIML Extension
  *
- * A class implementing AIMLProcessorExtension should return a Set of tag names and provide a function to recursively evaluate the XML parse tree for each node associated with a new tag.
+ * A class implementing AIMLProcessorExtension should return a Set of tag names and provide a function
+ * to recursively evaluate the XML parse tree for each node associated with a new tag.
  */
 public interface AIMLProcessorExtension {
 	/**

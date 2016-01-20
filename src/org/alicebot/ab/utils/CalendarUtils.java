@@ -51,7 +51,8 @@ public class CalendarUtils {
 			final SimpleDateFormat simpleDateFormat = new SimpleDateFormat(jformat);
 			dateAsString = simpleDateFormat.format(new Date());
 		} catch (final Exception ex) {
-			System.out.println("CalendarUtils.date Bad date: Format = " + jformat + " Locale = " + locale + " Timezone = " + timezone);
+			System.out.println("CalendarUtils.date Bad date: Format = " + jformat + " Locale = "
+					+ locale + " Timezone = " + timezone);
 			ex.printStackTrace();
 		}
 		// MagicBooleans.trace("CalendarUtils.date: "+dateAsString);

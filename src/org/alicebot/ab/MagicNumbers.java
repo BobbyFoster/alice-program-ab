@@ -25,7 +25,8 @@ package org.alicebot.ab;
  *
  */
 public class MagicNumbers {
-	public static int node_activation_cnt = 4; // minimum number of activations to suggest atomic pattern
+	public static int node_activation_cnt = 4; // minimum number of activations to suggest atomic
+												// pattern
 	public static int node_size = 4; // minimum number of branches to suggest wildcard pattern
 	public static int displayed_input_sample_size = 6;
 	public static int max_history = 32;

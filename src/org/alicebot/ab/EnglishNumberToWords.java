@@ -13,10 +13,12 @@ package org.alicebot.ab;
 import java.text.DecimalFormat;
 
 public class EnglishNumberToWords {
-	private static final String[] tensNames = { "", " ten", " twenty", " thirty", " forty", " fifty", " sixty", " seventy", " eighty", " ninety" };
+	private static final String[] tensNames = { "", " ten", " twenty", " thirty", " forty", " fifty",
+			" sixty", " seventy", " eighty", " ninety" };
 
-	private static final String[] numNames = { "", " one", " two", " three", " four", " five", " six", " seven", " eight", " nine", " ten", " eleven", " twelve", " thirteen", " fourteen", " fifteen", " sixteen", " seventeen", " eighteen",
-			" nineteen" };
+	private static final String[] numNames = { "", " one", " two", " three", " four", " five", " six",
+			" seven", " eight", " nine", " ten", " eleven", " twelve", " thirteen", " fourteen",
+			" fifteen", " sixteen", " seventeen", " eighteen", " nineteen" };
 
 	private EnglishNumberToWords() {
 	}
@@ -151,9 +153,12 @@ public class EnglishNumberToWords {
 		System.out.println("*** " + EnglishNumberToWords.convert(3000000010L));
 
 		/*
-		 * ** zero** one** sixteen** one hundred** one hundred eighteen** two hundred** two hundred nineteen** eight hundred** eight hundred one** one thousand three hundred sixteen** one million** two millions** three millions two hundred
-		 * ** seven hundred thousand** nine millions** nine millions one thousand** one hundred twenty three millions four hundred* fifty six thousand seven hundred eighty nine** two billion one hundred forty seven millions* four hundred
-		 * eighty three thousand six hundred forty seven** three billion ten
+		 * ** zero** one** sixteen** one hundred** one hundred eighteen** two hundred** two hundred
+		 * nineteen** eight hundred** eight hundred one** one thousand three hundred sixteen** one
+		 * million** two millions** three millions two hundred ** seven hundred thousand** nine
+		 * millions** nine millions one thousand** one hundred twenty three millions four hundred* fifty
+		 * six thousand seven hundred eighty nine** two billion one hundred forty seven millions* four
+		 * hundred eighty three thousand six hundred forty seven** three billion ten
 		 */
 	}
 }

@@ -199,7 +199,8 @@ public class Category {
 	}
 
 	/**
-	 * return a string represeting the full pattern path as "{@code input pattern <THAT> that pattern <TOPIC> topic pattern}"
+	 * return a string represeting the full pattern path as "
+	 * {@code input pattern <THAT> that pattern <TOPIC> topic pattern}"
 	 *
 	 * @return
 	 */
@@ -215,7 +216,8 @@ public class Category {
 	 */
 	public void addMatch(final String input, final Bot bot) {
 		if (matches == null) {
-			final String setName = inputThatTopic().replace("*", "STAR").replace("_", "UNDERSCORE").replace(" ", "-").replace("<THAT>", "THAT").replace("<TOPIC>", "TOPIC");
+			final String setName = inputThatTopic().replace("*", "STAR").replace("_", "UNDERSCORE")
+					.replace(" ", "-").replace("<THAT>", "THAT").replace("<TOPIC>", "TOPIC");
 			// System.out.println("Created match set "+setName);
 			matches = new AIMLSet(setName, bot);
 		}
@@ -223,7 +225,8 @@ public class Category {
 	}
 
 	/**
-	 * convert a template to a single-line representation by replacing "," with #Comma and newline with #Newline
+	 * convert a template to a single-line representation by replacing "," with #Comma and newline with
+	 * #Newline
 	 *
 	 * @param template
 	 *            original template
@@ -259,7 +262,8 @@ public class Category {
 	public static Category IFToCategory(final String IF) {
 		final String[] split = IF.split(MagicStrings.aimlif_split_char);
 		// System.out.println("Read: "+split);
-		return new Category(Integer.parseInt(split[0]), split[1], split[2], split[3], lineToTemplate(split[4]), split[5]);
+		return new Category(Integer.parseInt(split[0]), split[1], split[2], split[3],
+				lineToTemplate(split[4]), split[5]);
 	}
 
 	/**
@@ -272,7 +276,9 @@ public class Category {
 	public static String categoryToIF(final Category category) {
 		// System.out.println("categoryToIF: template="+templateToLine(category.getTemplate()));
 		final String c = MagicStrings.aimlif_split_char;
-		return category.getActivationCnt() + c + category.getPattern() + c + category.getThat() + c + category.getTopic() + c + templateToLine(category.getTemplate()) + c + category.getFilename();
+		return category.getActivationCnt() + c + category.getPattern() + c + category.getThat() + c
+				+ category.getTopic() + c + templateToLine(category.getTemplate()) + c
+				+ category.getFilename();
 	}
 
 	/**
@@ -311,7 +317,9 @@ public class Category {
 			if (!category.getThat().equals("*")) {
 				thatStatement = "<that>" + category.getThat() + "</that>";
 			}
-			result = topicStart + "<category><pattern>" + pattern + "</pattern>" + thatStatement + NL + "<template>" + category.getTemplate() + "</template>" + NL + "</category>" + topicEnd;
+			result = topicStart + "<category><pattern>" + pattern + "</pattern>" + thatStatement + NL
+					+ "<template>" + category.getTemplate() + "</template>" + NL + "</category>"
+					+ topicEnd;
 		} catch (final Exception ex) {
 			ex.printStackTrace();
 		}
@@ -334,7 +342,9 @@ public class Category {
 		for (final String word : words) {
 			// String word = words[i];
 			/*
-			 * if (!(word.matches("[\\p{Hiragana}\\p{Katakana}\\p{Han}\\p{Latin}]*+") || word.equals("*") || word.equals("_"))) { System.out.println("Invalid pattern word "+word); return false; }
+			 * if (!(word.matches("[\\p{Hiragana}\\p{Katakana}\\p{Han}\\p{Latin}]*+") ||
+			 * word.equals("*") || word.equals("_"))) {
+			 * System.out.println("Invalid pattern word "+word); return false; }
 			 */
 		}
 		return true;
@@ -390,7 +400,8 @@ public class Category {
 	 *            AIML file name
 	 */
 
-	public Category(final int activationCnt, String pattern, String that, String topic, String template, String filename) {
+	public Category(final int activationCnt, String pattern, String that, String topic,
+			String template, String filename) {
 		if (MagicBooleans.fix_excel_csv) {
 			pattern = Utilities.fixCSV(pattern);
 			that = Utilities.fixCSV(that);
@@ -421,9 +432,13 @@ public class Category {
 	 * @param filename
 	 *            AIML category
 	 */
-	public Category(final int activationCnt, final String patternThatTopic, final String template, final String filename) {
-		this(activationCnt, patternThatTopic.substring(0, patternThatTopic.indexOf("<THAT>")), patternThatTopic.substring(patternThatTopic.indexOf("<THAT>") + "<THAT>".length(), patternThatTopic.indexOf("<TOPIC>")), patternThatTopic
-				.substring(patternThatTopic.indexOf("<TOPIC>") + "<TOPIC>".length(), patternThatTopic.length()), template, filename);
+	public Category(final int activationCnt, final String patternThatTopic, final String template,
+			final String filename) {
+		this(activationCnt, patternThatTopic.substring(0, patternThatTopic.indexOf("<THAT>")),
+				patternThatTopic.substring(patternThatTopic.indexOf("<THAT>") + "<THAT>".length(),
+						patternThatTopic.indexOf("<TOPIC>")), patternThatTopic.substring(
+						patternThatTopic.indexOf("<TOPIC>") + "<TOPIC>".length(),
+						patternThatTopic.length()), template, filename);
 	}
 
 	/**
