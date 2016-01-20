@@ -14,9 +14,7 @@ import java.nio.charset.Charset;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
-
 public class IOUtils {
-
 
 	BufferedReader reader;
 	BufferedWriter writer;
@@ -34,7 +32,6 @@ public class IOUtils {
 		}
 	}
 
-	
 	public String readLine() {
 		String result = null;
 		try {
@@ -45,7 +42,6 @@ public class IOUtils {
 		return result;
 	}
 
-
 	public void writeLine(String line) {
 		try {
 			writer.write(line);
@@ -55,33 +51,31 @@ public class IOUtils {
 		}
 	}
 
-
 	public void close() {
 		try {
-			if (reader != null) reader.close();
-			if (writer != null) writer.close();
+			if (reader != null)
+				reader.close();
+			if (writer != null)
+				writer.close();
 		} catch (IOException e) {
 			System.err.println("error: " + e);
 		}
 
 	}
 
-
 	public static void writeOutputTextLine(String prompt, String text) {
 		System.out.println(prompt + ": " + text);
 	}
-
 
 	public static String readInputTextLine() {
 		return readInputTextLine(null);
 	}
 
-
 	public static String readInputTextLine(String prompt) {
 		if (prompt != null) {
 			System.out.print(prompt + ": ");
 		}
-        BufferedReader lineOfText = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader lineOfText = new BufferedReader(new InputStreamReader(System.in));
 		String textLine = null;
 		try {
 			textLine = lineOfText.readLine();
@@ -91,42 +85,38 @@ public class IOUtils {
 		return textLine;
 	}
 
-
 	public static File[] listFiles(File dir) {
 		return dir.listFiles();
 	}
 
-
 	public static String system(String evaluatedContents, String failedString) {
 		Runtime rt = Runtime.getRuntime();
-        //System.out.println("System "+evaluatedContents);
-        try {
-            Process p = rt.exec(evaluatedContents);
-            InputStream istrm = p.getInputStream();
-            InputStreamReader istrmrdr = new InputStreamReader(istrm);
-            BufferedReader buffrdr = new BufferedReader(istrmrdr);
-            String result = "";
-            String data = "";
-            while ((data = buffrdr.readLine()) != null) {
-                result += data+"\n";
-            }
-            //System.out.println("Result = "+result);
-            return result;
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return failedString;
+		// System.out.println("System "+evaluatedContents);
+		try {
+			Process p = rt.exec(evaluatedContents);
+			InputStream istrm = p.getInputStream();
+			InputStreamReader istrmrdr = new InputStreamReader(istrm);
+			BufferedReader buffrdr = new BufferedReader(istrmrdr);
+			String result = "";
+			String data = "";
+			while ((data = buffrdr.readLine()) != null) {
+				result += data + "\n";
+			}
+			// System.out.println("Result = "+result);
+			return result;
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			return failedString;
 
-        }
+		}
 	}
 
-	
 	public static String evalScript(String engineName, String script) throws Exception {
-        //System.out.println("evaluating "+script);
-        ScriptEngineManager mgr = new ScriptEngineManager();
-        ScriptEngine engine = mgr.getEngineByName("JavaScript");
-		String result = ""+engine.eval(script);
+		// System.out.println("evaluating "+script);
+		ScriptEngineManager mgr = new ScriptEngineManager();
+		ScriptEngine engine = mgr.getEngineByName("JavaScript");
+		String result = "" + engine.eval(script);
 		return result;
 	}
 
 }
-
