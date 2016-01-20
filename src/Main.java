@@ -19,6 +19,7 @@
         Boston, MA  02110-1301, USA.
 */
 
+import fi.iki.elonen.NanoHTTPD;
 import org.alicebot.ab.*;
 
 import java.io.*;
@@ -79,6 +80,7 @@ public class Main {
 			TestAB.testChat(bot, doWrites, MagicBooleans.trace_mode);
 		}
         //else if (action.equals("test")) testSuite(bot, MagicStrings.root_path+"/data/find.txt");
+        else if (action.equals("webservice")) new WebService();
         else if (action.equals("ab")) TestAB.testAB(bot, TestAB.sample_file);
         else if (action.equals("aiml2csv") || action.equals("csv2aiml")) convert(bot, action);
         else if (action.equals("abwq")){AB ab = new AB(bot, TestAB.sample_file);  ab.abwq();}
@@ -202,5 +204,26 @@ public class Main {
         }
     }
 
+    static class WebService extends NanoHTTPD {
+        Bot bot = new Bot("alice2", "/Users/bobby/alice-program-ab");
+        Chat chatSession = new Chat(bot);
+
+        public WebService() {
+            super(8080);
+            try {
+                start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println("Running 'alice-program-ab' WebService...");
+        }
+
+        @Override
+        public Response serve(IHTTPSession session) {
+            String q = session.getParms().get("q").replaceAll("[^a-zA-Z0-9?.!]", "");
+            System.out.println("query: " + q);
+            return newFixedLengthResponse(chatSession.multisentenceRespond(q));
+        }
+    }
 
 }

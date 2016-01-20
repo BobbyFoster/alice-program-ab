@@ -2,7 +2,6 @@
 <project name="alice-program-ab" default="all">
   
   
-  <property file="build.properties"/>
   <!-- Uncomment the following property if no tests compilation is needed -->
   <!-- 
   <property name="skip.tests" value="true"/>
@@ -72,6 +71,7 @@
     <pathelement location="${basedir}/lib/joda-time-2.1.jar"/>
     <pathelement location="${basedir}/lib/json-20090211.jar"/>
     <pathelement location="${basedir}/lib/junit-4.11.jar"/>
+    <pathelement location="${basedir}/lib/nanohttpd-2.2.0.jar"/>
     <pathelement location="${basedir}/lib/sanmoku-0.0.5.jar"/>
     <pathelement location="${basedir}/lib/sanmoku-feature-ex-0.0.1.jar"/>
   </path>
@@ -191,6 +191,7 @@
       <zipfileset src="${basedir}/lib/hamcrest-all-1.3.jar"/>
       <zipfileset src="${basedir}/lib/httpcore-4.2.1.jar"/>
       <zipfileset src="${basedir}/lib/joda-time-2.1.jar"/>
+      <zipfileset src="${basedir}/lib/nanohttpd-2.2.0.jar"/>
     </jar>
     <copy file="${temp.jar.path.alice-program-ab.jar}" tofile="lib/Ab.jar"/>
   </target>
