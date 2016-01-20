@@ -1,2 +1,5 @@
+.DS_Store
 .idea
 alice-program-ab.iml
+lib/Ab.jar
+out/
