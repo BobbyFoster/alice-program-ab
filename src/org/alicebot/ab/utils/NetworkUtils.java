@@ -1,55 +1,54 @@
 package org.alicebot.ab.utils;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.net.URI;
+import java.net.URLEncoder;
+import java.util.Enumeration;
+
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.*;
-import java.util.Enumeration;
 
 public class NetworkUtils {
 
 	public static String localIPAddress() {
 		try {
-			for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
-				NetworkInterface intf = en.nextElement();
-				for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
-					InetAddress inetAddress = enumIpAddr.nextElement();
+			for (final Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
+				final NetworkInterface intf = en.nextElement();
+				for (final Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
+					final InetAddress inetAddress = enumIpAddr.nextElement();
 					if (!inetAddress.isLoopbackAddress()) {
 						String ipAddress = inetAddress.getHostAddress().toString();
-						int p = ipAddress.indexOf("%");
-						if (p > 0)
+						final int p = ipAddress.indexOf("%");
+						if (p > 0) {
 							ipAddress = ipAddress.substring(0, p);
+						}
 						// if (MagicBooleans.trace_mode) System.out.println("--> localIPAddress = "+ipAddress);
 						return ipAddress;
 					}
 				}
 			}
-		} catch (SocketException ex) {
+		} catch (final SocketException ex) {
 			ex.printStackTrace();
 		}
 		return "127.0.0.1";
 	}
 
-	public static String responseContent(String url) throws Exception {
-		HttpClient client = new DefaultHttpClient();
-		HttpGet request = new HttpGet();
+	public static String responseContent(final String url) throws Exception {
+		final HttpClient client = new DefaultHttpClient();
+		final HttpGet request = new HttpGet();
 		request.setURI(new URI(url));
-		InputStream is = client.execute(request).getEntity().getContent();
-		BufferedReader inb = new BufferedReader(new InputStreamReader(is));
-		StringBuilder sb = new StringBuilder("");
+		final InputStream is = client.execute(request).getEntity().getContent();
+		final BufferedReader inb = new BufferedReader(new InputStreamReader(is));
+		final StringBuilder sb = new StringBuilder("");
 		String line;
-		String NL = System.getProperty("line.separator");
+		final String NL = System.getProperty("line.separator");
 		while ((line = inb.readLine()) != null) {
 			sb.append(line).append(NL);
 		}
@@ -69,15 +68,15 @@ public class NetworkUtils {
 	 * down the underlying // connection and release it back to the connection manager. httpget.abort(); throw ex; } finally { // Closing the input stream will trigger connection release is.close(); } // When HttpClient instance is no
 	 * longer needed, // shut down the connection manager to ensure // immediate deallocation of all system resources httpclient.getConnectionManager().shutdown(); } return result; }
 	 */
-	public static String responseContentUri(URI uri) throws Exception {
-		HttpClient client = new DefaultHttpClient();
-		HttpPost request = new HttpPost();
+	public static String responseContentUri(final URI uri) throws Exception {
+		final HttpClient client = new DefaultHttpClient();
+		final HttpPost request = new HttpPost();
 		request.setURI(uri);
-		InputStream is = client.execute(request).getEntity().getContent();
-		BufferedReader inb = new BufferedReader(new InputStreamReader(is));
-		StringBuilder sb = new StringBuilder("");
+		final InputStream is = client.execute(request).getEntity().getContent();
+		final BufferedReader inb = new BufferedReader(new InputStreamReader(is));
+		final StringBuilder sb = new StringBuilder("");
 		String line;
-		String NL = System.getProperty("line.separator");
+		final String NL = System.getProperty("line.separator");
 		while ((line = inb.readLine()) != null) {
 			sb.append(line).append(NL);
 		}
@@ -85,16 +84,17 @@ public class NetworkUtils {
 		return sb.toString();
 	}
 
-	public static String spec(String host, String botid, String custid, String input) {
+	public static String spec(final String host, final String botid, final String custid, final String input) {
 		// System.out.println("--> custid = "+custid);
 		String spec = "";
 		try {
-			if (custid.equals("0")) // get custid on first transaction with Pandorabots
+			if (custid.equals("0")) {
 				spec = String.format("%s?botid=%s&input=%s", "http://" + host + "/pandora/talk-xml", botid, URLEncoder.encode(input, "UTF-8"));
-			else
+			} else {
 				spec = // re-use custid on each subsequent interaction
 				String.format("%s?botid=%s&custid=%s&input=%s", "http://" + host + "/pandora/talk-xml", botid, custid, URLEncoder.encode(input, "UTF-8"));
-		} catch (Exception ex) {
+			}
+		} catch (final Exception ex) {
 			ex.printStackTrace();
 		}
 		System.out.println(spec);

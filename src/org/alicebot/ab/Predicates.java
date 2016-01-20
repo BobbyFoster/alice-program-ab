@@ -20,10 +20,14 @@ package org.alicebot.ab;
  Boston, MA  02110-1301, USA.
  */
 
-import org.alicebot.ab.utils.JapaneseUtils;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
+
+import org.alicebot.ab.utils.JapaneseUtils;
 
 /**
  * Manage client predicates
@@ -39,18 +43,22 @@ public class Predicates extends HashMap<String, String> {
 	 *            predicate value
 	 * @return predicate value
 	 */
-	public String put(String key, String value) {
+	@Override
+	public String put(final String key, String value) {
 		// MagicBooleans.trace("predicates.put(key: " + key + ", value: " + value + ")");
 		if (MagicBooleans.jp_tokenize) {
-			if (key.equals("topic"))
+			if (key.equals("topic")) {
 				value = JapaneseUtils.tokenizeSentence(value);
+			}
 		}
-		if (key.equals("topic") && value.length() == 0)
+		if (key.equals("topic") && value.length() == 0) {
 			value = MagicStrings.default_get;
-		if (value.equals(MagicStrings.too_much_recursion))
+		}
+		if (value.equals(MagicStrings.too_much_recursion)) {
 			value = MagicStrings.default_list_item;
+		}
 		// MagicBooleans.trace("Setting predicate key: " + key + " to value: " + value);
-		String result = super.put(key, value);
+		final String result = super.put(key, value);
 		// MagicBooleans.trace("in predicates.put, returning: " + result);
 		return result;
 	}
@@ -62,11 +70,12 @@ public class Predicates extends HashMap<String, String> {
 	 *            predicate name
 	 * @return predicate value
 	 */
-	public String get(String key) {
+	public String get(final String key) {
 		// MagicBooleans.trace("predicates.get(key: " + key + ")");
 		String result = super.get(key);
-		if (result == null)
+		if (result == null) {
 			result = MagicStrings.default_get;
+		}
 		// MagicBooleans.trace("in predicates.get, returning: " + result);
 		return result;
 	}
@@ -77,19 +86,19 @@ public class Predicates extends HashMap<String, String> {
 	 * @param in
 	 *            input stream
 	 */
-	public void getPredicateDefaultsFromInputStream(InputStream in) {
-		BufferedReader br = new BufferedReader(new InputStreamReader(in));
+	public void getPredicateDefaultsFromInputStream(final InputStream in) {
+		final BufferedReader br = new BufferedReader(new InputStreamReader(in));
 		String strLine;
 		try {
 			// Read File Line By Line
 			while ((strLine = br.readLine()) != null) {
 				if (strLine.contains(":")) {
-					String property = strLine.substring(0, strLine.indexOf(":"));
-					String value = strLine.substring(strLine.indexOf(":") + 1);
+					final String property = strLine.substring(0, strLine.indexOf(":"));
+					final String value = strLine.substring(strLine.indexOf(":") + 1);
 					put(property, value);
 				}
 			}
-		} catch (Exception ex) {
+		} catch (final Exception ex) {
 			ex.printStackTrace();
 		}
 	}
@@ -100,18 +109,18 @@ public class Predicates extends HashMap<String, String> {
 	 * @param filename
 	 *            name of file
 	 */
-	public void getPredicateDefaults(String filename) {
+	public void getPredicateDefaults(final String filename) {
 		try {
 			// Open the file that is the first
 			// command line parameter
-			File file = new File(filename);
+			final File file = new File(filename);
 			if (file.exists()) {
-				FileInputStream fstream = new FileInputStream(filename);
+				final FileInputStream fstream = new FileInputStream(filename);
 				// Get the object
 				getPredicateDefaultsFromInputStream(fstream);
 				fstream.close();
 			}
-		} catch (Exception e) {// Catch exception if any
+		} catch (final Exception e) {// Catch exception if any
 			System.err.println("Error: " + e.getMessage());
 		}
 	}

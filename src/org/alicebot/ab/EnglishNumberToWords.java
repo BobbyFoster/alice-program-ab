@@ -11,7 +11,6 @@ package org.alicebot.ab;
  **/
 
 import java.text.DecimalFormat;
-import java.util.Scanner;
 
 public class EnglishNumberToWords {
 	private static final String[] tensNames = { "", " ten", " twenty", " thirty", " forty", " fifty", " sixty", " seventy", " eighty", " ninety" };
@@ -35,12 +34,13 @@ public class EnglishNumberToWords {
 			soFar = tensNames[number % 10] + soFar;
 			number /= 10;
 		}
-		if (number == 0)
+		if (number == 0) {
 			return soFar;
+		}
 		return numNames[number] + " hundred" + soFar;
 	}
 
-	public static String convert(long number) {
+	public static String convert(final long number) {
 		// 0 to 999 999 999 999
 		if (number == 0) {
 			return "zero";
@@ -49,18 +49,18 @@ public class EnglishNumberToWords {
 		String snumber = Long.toString(number);
 
 		// pad with "0"
-		String mask = "000000000000";
-		DecimalFormat df = new DecimalFormat(mask);
+		final String mask = "000000000000";
+		final DecimalFormat df = new DecimalFormat(mask);
 		snumber = df.format(number);
 
 		// XXXnnnnnnnnn
-		int billions = Integer.parseInt(snumber.substring(0, 3));
+		final int billions = Integer.parseInt(snumber.substring(0, 3));
 		// nnnXXXnnnnnn
-		int millions = Integer.parseInt(snumber.substring(3, 6));
+		final int millions = Integer.parseInt(snumber.substring(3, 6));
 		// nnnnnnXXXnnn
-		int hundredThousands = Integer.parseInt(snumber.substring(6, 9));
+		final int hundredThousands = Integer.parseInt(snumber.substring(6, 9));
 		// nnnnnnnnnXXX
-		int thousands = Integer.parseInt(snumber.substring(9, 12));
+		final int thousands = Integer.parseInt(snumber.substring(9, 12));
 
 		String tradBillions;
 		switch (billions) {
@@ -109,17 +109,18 @@ public class EnglishNumberToWords {
 		return result.replaceAll("^\\s+", "").replaceAll("\\b\\s{2,}\\b", " ");
 	}
 
-	public static void makeSetMap(Bot bot) {
-		AIMLSet numberName = new AIMLSet("numbername", bot);
-		AIMLMap name2number = new AIMLMap("name2number", bot);
+	public static void makeSetMap(final Bot bot) {
+		final AIMLSet numberName = new AIMLSet("numbername", bot);
+		final AIMLMap name2number = new AIMLMap("name2number", bot);
 
 		for (int i = 0; i < 10000; i++) {
-			String name = EnglishNumberToWords.convert(i).trim();
-			String number = "" + i;
+			final String name = EnglishNumberToWords.convert(i).trim();
+			final String number = "" + i;
 			numberName.add(name);
 			name2number.put(name, number);
-			if (i == 1000)
+			if (i == 1000) {
 				System.out.println("Name2number(" + name + ")=" + number);
+			}
 
 		}
 
@@ -128,7 +129,7 @@ public class EnglishNumberToWords {
 
 	}
 
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		System.out.println("*** " + EnglishNumberToWords.convert(0));
 		System.out.println("*** " + EnglishNumberToWords.convert(1));
 		System.out.println("*** " + EnglishNumberToWords.convert(16));

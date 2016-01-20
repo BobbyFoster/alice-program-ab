@@ -19,7 +19,11 @@ package org.alicebot.ab;
  Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
  Boston, MA  02110-1301, USA.
  */
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 
 /**
@@ -34,12 +38,13 @@ public class Properties extends HashMap<String, String> {
 	 *            property name
 	 * @return property value or a string indicating the property is undefined
 	 */
-	public String get(String key) {
-		String result = super.get(key);
-		if (result == null)
+	public String get(final String key) {
+		final String result = super.get(key);
+		if (result == null) {
 			return MagicStrings.default_property;
-		else
+		} else {
 			return result;
+		}
 	}
 
 	/**
@@ -48,21 +53,21 @@ public class Properties extends HashMap<String, String> {
 	 * @param in
 	 *            Input stream
 	 */
-	public int getPropertiesFromInputStream(InputStream in) {
+	public int getPropertiesFromInputStream(final InputStream in) {
 		int cnt = 0;
-		BufferedReader br = new BufferedReader(new InputStreamReader(in));
+		final BufferedReader br = new BufferedReader(new InputStreamReader(in));
 		String strLine;
 		// Read File Line By Line
 		try {
 			while ((strLine = br.readLine()) != null) {
 				if (strLine.contains(":")) {
-					String property = strLine.substring(0, strLine.indexOf(":"));
-					String value = strLine.substring(strLine.indexOf(":") + 1);
+					final String property = strLine.substring(0, strLine.indexOf(":"));
+					final String value = strLine.substring(strLine.indexOf(":") + 1);
 					put(property, value);
 					cnt++;
 				}
 			}
-		} catch (Exception ex) {
+		} catch (final Exception ex) {
 			ex.printStackTrace();
 		}
 		return cnt;
@@ -74,24 +79,26 @@ public class Properties extends HashMap<String, String> {
 	 * @param filename
 	 *            file containing bot properties
 	 */
-	public int getProperties(String filename) {
+	public int getProperties(final String filename) {
 		int cnt = 0;
-		if (MagicBooleans.trace_mode)
+		if (MagicBooleans.trace_mode) {
 			System.out.println("Get Properties: " + filename);
+		}
 		try {
 			// Open the file that is the first
 			// command line parameter
-			File file = new File(filename);
+			final File file = new File(filename);
 			if (file.exists()) {
-				if (MagicBooleans.trace_mode)
+				if (MagicBooleans.trace_mode) {
 					System.out.println("Exists: " + filename);
-				FileInputStream fstream = new FileInputStream(filename);
+				}
+				final FileInputStream fstream = new FileInputStream(filename);
 				// Get the object
 				cnt = getPropertiesFromInputStream(fstream);
 				// Close the input stream
 				fstream.close();
 			}
-		} catch (Exception e) {// Catch exception if any
+		} catch (final Exception e) {// Catch exception if any
 			System.err.println("Error: " + e.getMessage());
 		}
 		return cnt;

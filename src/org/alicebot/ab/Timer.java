@@ -39,7 +39,7 @@ public class Timer {
 	}
 
 	public long elapsedRestartMs() {
-		long ms = System.currentTimeMillis() - startTimeMillis + 1;
+		final long ms = System.currentTimeMillis() - startTimeMillis + 1;
 		start();
 		return ms;
 	}

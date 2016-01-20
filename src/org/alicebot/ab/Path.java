@@ -58,7 +58,7 @@ public class Path extends ArrayList<String> {
 	 *            input path
 	 * @return sentence
 	 */
-	public static String pathToSentence(Path path) {
+	public static String pathToSentence(final Path path) {
 		String result = "";
 		for (Path p = path; p != null; p = p.next) {
 			result = result + " " + p.word;
@@ -76,45 +76,22 @@ public class Path extends ArrayList<String> {
 	 *            array of strings
 	 * @return sequence of strings as Path
 	 */
-	private static Path arrayToPath(String[] array) {
+	private static Path arrayToPath(final String[] array) {
 		Path tail = null;
 		Path head = null;
 		for (int i = array.length - 1; i >= 0; i--) {
 			head = new Path();
 			head.word = array[i];
 			head.next = tail;
-			if (tail == null)
+			if (tail == null) {
 				head.length = 1;
-			else
+			} else {
 				head.length = tail.length + 1;
+			}
 			tail = head;
 		}
 		return head;
 		// return arrayToPath(array, 0);
-	}
-
-	/**
-	 * recursively convert an array to a Path
-	 *
-	 * @param array
-	 *            array of strings
-	 * @param index
-	 *            array index
-	 * @return Path form
-	 */
-	private static Path arrayToPath(String[] array, int index) {
-		if (index >= array.length)
-			return null;
-		else {
-			Path newPath = new Path();
-			newPath.word = array[index];
-			newPath.next = arrayToPath(array, index + 1);
-			if (newPath.next == null)
-				newPath.length = 1;
-			else
-				newPath.length = newPath.next.length + 1;
-			return newPath;
-		}
 	}
 
 	/**
@@ -125,8 +102,9 @@ public class Path extends ArrayList<String> {
 		for (Path p = this; p != null; p = p.next) {
 			result += p.word + ",";
 		}
-		if (result.endsWith(","))
+		if (result.endsWith(",")) {
 			result = result.substring(0, result.length() - 1);
+		}
 		System.out.println(result);
 	}
 

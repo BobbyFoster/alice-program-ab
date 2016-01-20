@@ -43,7 +43,7 @@ public class History<T> {
 	 * @param name
 	 *            name of history
 	 */
-	public History(String name) {
+	public History(final String name) {
 		this.name = name;
 		history = new Object[MagicNumbers.max_history];
 	}
@@ -54,7 +54,7 @@ public class History<T> {
 	 * @param item
 	 *            history item to add
 	 */
-	public void add(T item) {
+	public void add(final T item) {
 		for (int i = MagicNumbers.max_history - 1; i > 0; i--) {
 			history[i] = history[i - 1];
 		}
@@ -68,14 +68,16 @@ public class History<T> {
 	 *            history index
 	 * @return history item
 	 */
-	public T get(int index) {
+	public T get(final int index) {
 		if (index < MagicNumbers.max_history) {
-			if (history[index] == null)
+			if (history[index] == null) {
 				return null;
-			else
+			} else {
 				return (T) history[index];
-		} else
+			}
+		} else {
 			return null;
+		}
 	}
 
 	/**
@@ -85,14 +87,16 @@ public class History<T> {
 	 *            history index
 	 * @return history item
 	 */
-	public String getString(int index) {
+	public String getString(final int index) {
 		if (index < MagicNumbers.max_history) {
-			if (history[index] == null)
+			if (history[index] == null) {
 				return MagicStrings.unknown_history_item;
-			else
+			} else {
 				return (String) history[index];
-		} else
+			}
+		} else {
 			return null;
+		}
 	}
 
 	/**
@@ -103,8 +107,9 @@ public class History<T> {
 		for (i = 0; get(i) != null; i++) {
 			System.out.println(name + "History " + (i + 1) + " = " + get(i));
 			System.out.println(String.valueOf(get(i).getClass()).contains("History"));
-			if (String.valueOf(get(i).getClass()).contains("History"))
+			if (String.valueOf(get(i).getClass()).contains("History")) {
 				((History) get(i)).printHistory();
+			}
 		}
 	}
 }

@@ -9,8 +9,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import java.nio.charset.Charset;
-
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
@@ -19,15 +17,15 @@ public class IOUtils {
 	BufferedReader reader;
 	BufferedWriter writer;
 
-	public IOUtils(String filePath, String mode) {
+	public IOUtils(final String filePath, final String mode) {
 		try {
 			if (mode.equals("read")) {
 				reader = new BufferedReader(new FileReader(filePath));
 			} else if (mode.equals("write")) {
-				(new File(filePath)).delete();
+				new File(filePath).delete();
 				writer = new BufferedWriter(new FileWriter(filePath, true));
 			}
-		} catch (IOException e) {
+		} catch (final IOException e) {
 			System.err.println("error: " + e);
 		}
 	}
@@ -36,34 +34,36 @@ public class IOUtils {
 		String result = null;
 		try {
 			result = reader.readLine();
-		} catch (IOException e) {
+		} catch (final IOException e) {
 			System.err.println("error: " + e);
 		}
 		return result;
 	}
 
-	public void writeLine(String line) {
+	public void writeLine(final String line) {
 		try {
 			writer.write(line);
 			writer.newLine();
-		} catch (IOException e) {
+		} catch (final IOException e) {
 			System.err.println("error: " + e);
 		}
 	}
 
 	public void close() {
 		try {
-			if (reader != null)
+			if (reader != null) {
 				reader.close();
-			if (writer != null)
+			}
+			if (writer != null) {
 				writer.close();
-		} catch (IOException e) {
+			}
+		} catch (final IOException e) {
 			System.err.println("error: " + e);
 		}
 
 	}
 
-	public static void writeOutputTextLine(String prompt, String text) {
+	public static void writeOutputTextLine(final String prompt, final String text) {
 		System.out.println(prompt + ": " + text);
 	}
 
@@ -71,32 +71,32 @@ public class IOUtils {
 		return readInputTextLine(null);
 	}
 
-	public static String readInputTextLine(String prompt) {
+	public static String readInputTextLine(final String prompt) {
 		if (prompt != null) {
 			System.out.print(prompt + ": ");
 		}
-		BufferedReader lineOfText = new BufferedReader(new InputStreamReader(System.in));
+		final BufferedReader lineOfText = new BufferedReader(new InputStreamReader(System.in));
 		String textLine = null;
 		try {
 			textLine = lineOfText.readLine();
-		} catch (IOException e) {
+		} catch (final IOException e) {
 			e.printStackTrace();
 		}
 		return textLine;
 	}
 
-	public static File[] listFiles(File dir) {
+	public static File[] listFiles(final File dir) {
 		return dir.listFiles();
 	}
 
-	public static String system(String evaluatedContents, String failedString) {
-		Runtime rt = Runtime.getRuntime();
+	public static String system(final String evaluatedContents, final String failedString) {
+		final Runtime rt = Runtime.getRuntime();
 		// System.out.println("System "+evaluatedContents);
 		try {
-			Process p = rt.exec(evaluatedContents);
-			InputStream istrm = p.getInputStream();
-			InputStreamReader istrmrdr = new InputStreamReader(istrm);
-			BufferedReader buffrdr = new BufferedReader(istrmrdr);
+			final Process p = rt.exec(evaluatedContents);
+			final InputStream istrm = p.getInputStream();
+			final InputStreamReader istrmrdr = new InputStreamReader(istrm);
+			final BufferedReader buffrdr = new BufferedReader(istrmrdr);
 			String result = "";
 			String data = "";
 			while ((data = buffrdr.readLine()) != null) {
@@ -104,18 +104,18 @@ public class IOUtils {
 			}
 			// System.out.println("Result = "+result);
 			return result;
-		} catch (Exception ex) {
+		} catch (final Exception ex) {
 			ex.printStackTrace();
 			return failedString;
 
 		}
 	}
 
-	public static String evalScript(String engineName, String script) throws Exception {
+	public static String evalScript(final String engineName, final String script) throws Exception {
 		// System.out.println("evaluating "+script);
-		ScriptEngineManager mgr = new ScriptEngineManager();
-		ScriptEngine engine = mgr.getEngineByName("JavaScript");
-		String result = "" + engine.eval(script);
+		final ScriptEngineManager mgr = new ScriptEngineManager();
+		final ScriptEngine engine = mgr.getEngineByName("JavaScript");
+		final String result = "" + engine.eval(script);
 		return result;
 	}
 

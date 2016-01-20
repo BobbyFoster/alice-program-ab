@@ -48,14 +48,14 @@ public class ParseState {
 	 * @param leaf
 	 *            node containing the category processed
 	 */
-	public ParseState(int depth, Chat chatSession, String input, String that, String topic, Nodemapper leaf) {
+	public ParseState(final int depth, final Chat chatSession, final String input, final String that, final String topic, final Nodemapper leaf) {
 		this.chatSession = chatSession;
 		this.input = input;
 		this.that = that;
 		this.topic = topic;
 		this.leaf = leaf;
 		this.depth = depth; // to prevent runaway recursion
-		this.vars = new Predicates();
-		this.starBindings = leaf.starBindings;
+		vars = new Predicates();
+		starBindings = leaf.starBindings;
 	}
 }

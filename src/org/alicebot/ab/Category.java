@@ -31,7 +31,7 @@ public class Category {
 	private String template;
 	private String filename;
 	private int activationCnt;
-	private int categoryNumber; // for loading order
+	private final int categoryNumber; // for loading order
 	public static int categoryCnt = 0;
 	private AIMLSet matches;
 
@@ -40,11 +40,12 @@ public class Category {
 	 *
 	 * @return and AIML Set of elements matching this category
 	 */
-	public AIMLSet getMatches(Bot bot) {
-		if (matches != null)
+	public AIMLSet getMatches(final Bot bot) {
+		if (matches != null) {
 			return matches;
-		else
+		} else {
 			return new AIMLSet("No Matches", bot);
+		}
 	}
 
 	/**
@@ -71,10 +72,11 @@ public class Category {
 	 * @return pattern
 	 */
 	public String getPattern() {
-		if (pattern == null)
+		if (pattern == null) {
 			return "*";
-		else
+		} else {
 			return pattern;
+		}
 	}
 
 	/**
@@ -83,10 +85,11 @@ public class Category {
 	 * @return that pattern
 	 */
 	public String getThat() {
-		if (that == null)
+		if (that == null) {
 			return "*";
-		else
+		} else {
 			return that;
+		}
 	}
 
 	/**
@@ -95,10 +98,11 @@ public class Category {
 	 * @return topic pattern
 	 */
 	public String getTopic() {
-		if (topic == null)
+		if (topic == null) {
 			return "*";
-		else
+		} else {
 			return topic;
+		}
 	}
 
 	/**
@@ -107,10 +111,11 @@ public class Category {
 	 * @return template
 	 */
 	public String getTemplate() {
-		if (template == null)
+		if (template == null) {
 			return "";
-		else
+		} else {
 			return template;
+		}
 	}
 
 	/**
@@ -119,10 +124,11 @@ public class Category {
 	 * @return file name
 	 */
 	public String getFilename() {
-		if (filename == null)
+		if (filename == null) {
 			return MagicStrings.unknown_aiml_file;
-		else
+		} else {
 			return filename;
+		}
 	}
 
 	/**
@@ -138,27 +144,27 @@ public class Category {
 	 * @param cnt
 	 *            activation count
 	 */
-	public void setActivationCnt(int cnt) {
+	public void setActivationCnt(final int cnt) {
 		activationCnt = cnt;
 	}
 
 	/**
 	 * set category filename
-	 * 
+	 *
 	 * @param filename
 	 *            name of AIML file
 	 */
-	public void setFilename(String filename) {
+	public void setFilename(final String filename) {
 		this.filename = filename;
 	}
 
 	/**
 	 * set category template
-	 * 
+	 *
 	 * @param template
 	 *            AIML template
 	 */
-	public void setTemplate(String template) {
+	public void setTemplate(final String template) {
 		this.template = template;
 	}
 
@@ -168,7 +174,7 @@ public class Category {
 	 * @param pattern
 	 *            AIML pattern
 	 */
-	public void setPattern(String pattern) {
+	public void setPattern(final String pattern) {
 		this.pattern = pattern;
 	}
 
@@ -178,7 +184,7 @@ public class Category {
 	 * @param that
 	 *            AIML that pattern
 	 */
-	public void setThat(String that) {
+	public void setThat(final String that) {
 		this.that = that;
 	}
 
@@ -188,13 +194,13 @@ public class Category {
 	 * @param topic
 	 *            AIML topic pattern
 	 */
-	public void setTopic(String topic) {
+	public void setTopic(final String topic) {
 		this.topic = topic;
 	}
 
 	/**
 	 * return a string represeting the full pattern path as "{@code input pattern <THAT> that pattern <TOPIC> topic pattern}"
-	 * 
+	 *
 	 * @return
 	 */
 	public String inputThatTopic() {
@@ -207,9 +213,9 @@ public class Category {
 	 * @param input
 	 *            matching input
 	 */
-	public void addMatch(String input, Bot bot) {
+	public void addMatch(final String input, final Bot bot) {
 		if (matches == null) {
-			String setName = this.inputThatTopic().replace("*", "STAR").replace("_", "UNDERSCORE").replace(" ", "-").replace("<THAT>", "THAT").replace("<TOPIC>", "TOPIC");
+			final String setName = inputThatTopic().replace("*", "STAR").replace("_", "UNDERSCORE").replace(" ", "-").replace("<THAT>", "THAT").replace("<TOPIC>", "TOPIC");
 			// System.out.println("Created match set "+setName);
 			matches = new AIMLSet(setName, bot);
 		}
@@ -218,12 +224,12 @@ public class Category {
 
 	/**
 	 * convert a template to a single-line representation by replacing "," with #Comma and newline with #Newline
-	 * 
+	 *
 	 * @param template
 	 *            original template
 	 * @return template on a single line of text
 	 */
-	public static String templateToLine(String template) {
+	public static String templateToLine(final String template) {
 		String result = template;
 		result = result.replaceAll("(\r\n|\n\r|\r|\n)", "\\#Newline");
 		result = result.replaceAll(MagicStrings.aimlif_split_char, MagicStrings.aimlif_split_char_name);
@@ -232,12 +238,12 @@ public class Category {
 
 	/**
 	 * restore a template to its original form by replacing #Comma with "," and #Newline with newline.
-	 * 
+	 *
 	 * @param line
 	 *            template on a single line of text
 	 * @return original multi-line template
 	 */
-	private static String lineToTemplate(String line) {
+	private static String lineToTemplate(final String line) {
 		String result = line.replaceAll("\\#Newline", "\n");
 		result = result.replaceAll(MagicStrings.aimlif_split_char_name, MagicStrings.aimlif_split_char);
 		return result;
@@ -250,22 +256,22 @@ public class Category {
 	 *            Category in AIMLIF format
 	 * @return Category object
 	 */
-	public static Category IFToCategory(String IF) {
-		String[] split = IF.split(MagicStrings.aimlif_split_char);
+	public static Category IFToCategory(final String IF) {
+		final String[] split = IF.split(MagicStrings.aimlif_split_char);
 		// System.out.println("Read: "+split);
 		return new Category(Integer.parseInt(split[0]), split[1], split[2], split[3], lineToTemplate(split[4]), split[5]);
 	}
 
 	/**
 	 * convert a Category object to AIMLIF format
-	 * 
+	 *
 	 * @param category
 	 *            Category object
 	 * @return category in AIML format
 	 */
-	public static String categoryToIF(Category category) {
+	public static String categoryToIF(final Category category) {
 		// System.out.println("categoryToIF: template="+templateToLine(category.getTemplate()));
-		String c = MagicStrings.aimlif_split_char;
+		final String c = MagicStrings.aimlif_split_char;
 		return category.getActivationCnt() + c + category.getPattern() + c + category.getThat() + c + category.getTopic() + c + templateToLine(category.getTemplate()) + c + category.getFilename();
 	}
 
@@ -276,14 +282,14 @@ public class Category {
 	 *            Category object
 	 * @return AIML Category
 	 */
-	public static String categoryToAIML(Category category) {
+	public static String categoryToAIML(final Category category) {
 		String topicStart = "";
 		String topicEnd = "";
 		String thatStatement = "";
 		String result = "";
 		String pattern = category.getPattern();
 		if (pattern.contains("<SET>") || pattern.contains("<BOT")) {
-			String[] splitPattern = pattern.split(" ");
+			final String[] splitPattern = pattern.split(" ");
 			String rpattern = "";
 			for (String w : splitPattern) {
 				if (w.startsWith("<SET>") || w.startsWith("<BOT") || w.startsWith("NAME=")) {
@@ -306,7 +312,7 @@ public class Category {
 				thatStatement = "<that>" + category.getThat() + "</that>";
 			}
 			result = topicStart + "<category><pattern>" + pattern + "</pattern>" + thatStatement + NL + "<template>" + category.getTemplate() + "</template>" + NL + "</category>" + topicEnd;
-		} catch (Exception ex) {
+		} catch (final Exception ex) {
 			ex.printStackTrace();
 		}
 		return result;
@@ -319,13 +325,13 @@ public class Category {
 	 *            pattern expression
 	 * @return true or false
 	 */
-	public boolean validPatternForm(String pattern) {
+	public boolean validPatternForm(final String pattern) {
 		if (pattern.length() < 1) {
 			validationMessage += "Zero length. ";
 			return false;
 		}
-		String[] words = pattern.split(" ");
-		for (int i = 0; i < words.length; i++) {
+		final String[] words = pattern.split(" ");
+		for (final String word : words) {
 			// String word = words[i];
 			/*
 			 * if (!(word.matches("[\\p{Hiragana}\\p{Katakana}\\p{Han}\\p{Latin}]*+") || word.equals("*") || word.equals("_"))) { System.out.println("Invalid pattern word "+word); return false; }
@@ -384,7 +390,7 @@ public class Category {
 	 *            AIML file name
 	 */
 
-	public Category(int activationCnt, String pattern, String that, String topic, String template, String filename) {
+	public Category(final int activationCnt, String pattern, String that, String topic, String template, String filename) {
 		if (MagicBooleans.fix_excel_csv) {
 			pattern = Utilities.fixCSV(pattern);
 			that = Utilities.fixCSV(that);
@@ -399,7 +405,7 @@ public class Category {
 		this.filename = filename;
 		this.activationCnt = activationCnt;
 		matches = null;
-		this.categoryNumber = categoryCnt++;
+		categoryNumber = categoryCnt++;
 		// System.out.println("Creating "+categoryNumber+" "+inputThatTopic());
 	}
 
@@ -415,7 +421,7 @@ public class Category {
 	 * @param filename
 	 *            AIML category
 	 */
-	public Category(int activationCnt, String patternThatTopic, String template, String filename) {
+	public Category(final int activationCnt, final String patternThatTopic, final String template, final String filename) {
 		this(activationCnt, patternThatTopic.substring(0, patternThatTopic.indexOf("<THAT>")), patternThatTopic.substring(patternThatTopic.indexOf("<THAT>") + "<THAT>".length(), patternThatTopic.indexOf("<TOPIC>")), patternThatTopic
 				.substring(patternThatTopic.indexOf("<TOPIC>") + "<TOPIC>".length(), patternThatTopic.length()), template, filename);
 	}
@@ -424,7 +430,8 @@ public class Category {
 	 * compare two categories for sorting purposes based on activation count
 	 */
 	public static Comparator<Category> ACTIVATION_COMPARATOR = new Comparator<Category>() {
-		public int compare(Category c1, Category c2) {
+		@Override
+		public int compare(final Category c1, final Category c2) {
 			return c2.getActivationCnt() - c1.getActivationCnt();
 		}
 	};
@@ -432,7 +439,8 @@ public class Category {
 	 * compare two categories for sorting purposes based on alphabetical order of patterns
 	 */
 	public static Comparator<Category> PATTERN_COMPARATOR = new Comparator<Category>() {
-		public int compare(Category c1, Category c2) {
+		@Override
+		public int compare(final Category c1, final Category c2) {
 			return String.CASE_INSENSITIVE_ORDER.compare(c1.inputThatTopic(), c2.inputThatTopic());
 		}
 	};
@@ -440,7 +448,8 @@ public class Category {
 	 * compare two categories for sorting purposes based on category index number
 	 */
 	public static Comparator<Category> CATEGORY_NUMBER_COMPARATOR = new Comparator<Category>() {
-		public int compare(Category c1, Category c2) {
+		@Override
+		public int compare(final Category c1, final Category c2) {
 			return c1.getCategoryNumber() - c2.getCategoryNumber();
 		}
 	};

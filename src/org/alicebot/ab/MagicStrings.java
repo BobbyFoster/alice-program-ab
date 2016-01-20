@@ -101,7 +101,7 @@ public class MagicStrings {
 	// paths
 	public static String root_path = "c:/ab";
 
-	public static void setRootPath(String newRootPath) {
+	public static void setRootPath(final String newRootPath) {
 		root_path = newRootPath;
 	}
 
