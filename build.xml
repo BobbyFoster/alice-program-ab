@@ -171,7 +171,11 @@
     <mkdir dir="${artifacts.temp.dir}"/>
     <property name="temp.jar.path.alice-program-ab.jar" value="${artifacts.temp.dir}/alice-program-ab.jar"/>
   </target>
-  
+
+  <target name="pretty-print-aiml">
+    <exec executable="scripts/pretty-print-aiml.sh" />
+  </target>
+
   <target name="artifact.alice-program-ab:jar" depends="init.artifacts, compile.module.alice-program-ab" description="Build &#39;alice-program-ab:jar&#39; artifact">
     <property name="artifact.temp.output.alice-program-ab:jar" value="${artifacts.temp.dir}/alice_program_ab_jar"/>
     <mkdir dir="${artifact.temp.output.alice-program-ab:jar}"/>
@@ -206,5 +210,5 @@
     <delete dir="${artifacts.temp.dir}"/>
   </target>
   
-  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+  <target name="all" depends="pretty-print-aiml, build.modules, build.all.artifacts" description="build all"/>
 </project>
