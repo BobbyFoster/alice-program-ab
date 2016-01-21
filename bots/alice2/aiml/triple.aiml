@@ -989,20 +989,13 @@
       <srai>Socrates is older than Plato</srai>
       <srai>Plato is older than Aristotle</srai>
     </think>Who is older Socrates or Plato? 
-    <srai>Who is older Socrates or Plato</srai>Who is older Plato
-    or Socrates? 
-    <srai>Who is older Plato or Socrates</srai>Who is older
-    Aristotle or Plato? 
-    <srai>Who is older Aristotle or Plato</srai>Who is older Plato
-    or Aritstotle? 
-    <srai>Who is older Plato or Aristotle</srai>Who is older
-    Socrates or Aristotle? 
-    <srai>Who is older Socrates or Aristotle</srai>Who is older
-    Aristotle or Socrates? 
-    <srai>Who is older Aristotle or Socrates</srai>Who is younger
-    Socrates or Aristotle? 
-    <srai>Who is younger Socrates or Aristotle</srai>Who is younger
-    Aristotle or Socrates? 
+    <srai>Who is older Socrates or Plato</srai>Who is older Plato or Socrates? 
+    <srai>Who is older Plato or Socrates</srai>Who is older Aristotle or Plato? 
+    <srai>Who is older Aristotle or Plato</srai>Who is older Plato or Aritstotle? 
+    <srai>Who is older Plato or Aristotle</srai>Who is older Socrates or Aristotle? 
+    <srai>Who is older Socrates or Aristotle</srai>Who is older Aristotle or Socrates? 
+    <srai>Who is older Aristotle or Socrates</srai>Who is younger Socrates or Aristotle? 
+    <srai>Who is younger Socrates or Aristotle</srai>Who is younger Aristotle or Socrates? 
     <srai>Who is younger Aristotle or Socrates</srai></template>
   </category>
   <category>
@@ -1315,8 +1308,7 @@
           </select>
         </set>
       </think>
-      <condition value="NIL" var="tuples">I don't know
-      who.</condition>
+      <condition value="NIL" var="tuples">I don't know who.</condition>
       <condition var="tuples">
         <li value="NIL" />
         <li>
@@ -1570,13 +1562,11 @@
   </category>
   <category>
     <pattern>BOTHLIFEAREA EDUCATION</pattern>
-    <template>They are both something you could learn about in
-    school.</template>
+    <template>They are both something you could learn about in school.</template>
   </category>
   <category>
     <pattern>BOTHLIFEAREA RECREATION</pattern>
-    <template>They are both something you might do for
-    recreation.</template>
+    <template>They are both something you might do for recreation.</template>
   </category>
   <category>
     <pattern>BOTHLIFEAREA PHYSICAL</pattern>
@@ -1588,8 +1578,7 @@
   </category>
   <category>
     <pattern>BOTHLIFEAREA ENTERTAINMENT</pattern>
-    <template>They are both connected with
-    entertainment.</template>
+    <template>They are both connected with entertainment.</template>
   </category>
   <category>
     <pattern>BOTHLIFEAREA FAMILY</pattern>
@@ -2141,8 +2130,7 @@
           <condition var="purpose2">
             <li value="unknown" />
             <li>
-              <condition value="false" var="samepurpose">They have
-              different purposes: 
+              <condition value="false" var="samepurpose">They have different purposes: 
               <get var="word1" />'s purpose is 
               <get var="purpose1" />, and 
               <get var="word2" />'s purpose is 
@@ -2174,8 +2162,7 @@
           </condition>
         </li>
       </condition>
-      <condition value="true" var="alike">They seem much the same
-      to me.</condition>
+      <condition value="true" var="alike">They seem much the same to me.</condition>
     </template>
   </category>
   <category>
@@ -2272,8 +2259,7 @@
     <get var="word1" />and 
     <get var="word2" />? 
     <condition value="true" var="name1">
-      <condition value="true" var="name2">They are both common
-      names of people. 
+      <condition value="true" var="name2">They are both common names of people. 
       <think>
         <set var="alike">true</set>
       </think>
@@ -2318,8 +2304,7 @@
         <li>They are about the same size.</li>
       </condition>
     </condition>
-    <condition value="true" var="samepurpose">They have the same
-    purpose: 
+    <condition value="true" var="samepurpose">They have the same purpose: 
     <srai>WHAT IS 
     <get var="word1" />FOR</srai>. 
     <think>
@@ -2333,8 +2318,7 @@
         <set var="alike">true</set>
       </think>
     </condition>
-    <condition value="false" var="alike">I don't know how they are
-    alike.</condition></template>
+    <condition value="false" var="alike">I don't know how they are alike.</condition></template>
   </category>
   <category>
     <pattern>SIZEOF *</pattern>

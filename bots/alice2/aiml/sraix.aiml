@@ -135,15 +135,13 @@
     <template>
       <think>
         <set name="sraix">
-          <sraix default="SCHEDULEFAILED" hint="event"
-          service="pannous">
+          <sraix default="SCHEDULEFAILED" hint="event" service="pannous">
             <star index="2" />
           </sraix>
         </set>
       </think>
       <condition name="sraix">
-        <li value="SCHEDULEFAILED">I'm unable to schedule that
-        event from this device.</li>
+        <li value="SCHEDULEFAILED">I'm unable to schedule that event from this device.</li>
         <li>I'll put that event on your calendar. 
         <oob>
           <schedule>
@@ -166,15 +164,13 @@
     <template>
       <think>
         <set name="sraix">
-          <sraix default="ALARMFAILED" hint="event"
-          service="pannous">
+          <sraix default="ALARMFAILED" hint="event" service="pannous">
             <star index="2" />
           </sraix>
         </set>
       </think>
       <condition name="sraix">
-        <li value="ALARMFAILED">I'm unable to set an alarm on this
-        device.</li>
+        <li value="ALARMFAILED">I'm unable to set an alarm on this device.</li>
         <li>I'll 
         <lowercase>
           <person>
@@ -413,30 +409,26 @@
   <category>
     <pattern>REMIND ME TO WAKE UP AT *</pattern>
     <template>
-      <srai>ALARMMESSAGE Wake up ALARMREQUEST REMIND ME TO WAKE UP
-      AT</srai>
+      <srai>ALARMMESSAGE Wake up ALARMREQUEST REMIND ME TO WAKE UP AT</srai>
     </template>
   </category>
   <category>
     <pattern>REMIND ME TO WAKE UP AT * TOMORROW</pattern>
     <template>
-      <srai>ALARMMESSAGE Wake up ALARMREQUEST REMIND ME TO WAKE UP
-      AT 
+      <srai>ALARMMESSAGE Wake up ALARMREQUEST REMIND ME TO WAKE UP AT 
       <star />TOMORROW</srai>
     </template>
   </category>
   <category>
     <pattern>REMIND ME TO WAKE UP TOMORROW</pattern>
     <template>
-      <srai>ALARMMESSAGE Wake up ALARMREQUEST REMIND ME TO WAKE UP
-      TOMORROW</srai>
+      <srai>ALARMMESSAGE Wake up ALARMREQUEST REMIND ME TO WAKE UP TOMORROW</srai>
     </template>
   </category>
   <category>
     <pattern>REMIND ME TOMORROW AT * TO WAKE UP</pattern>
     <template>
-      <srai>ALARMMESSAGE Wake up ALARMREQUEST REMIND ME TOMORROW AT
-      
+      <srai>ALARMMESSAGE Wake up ALARMREQUEST REMIND ME TOMORROW AT 
       <star />TO WAKE UP</srai>
     </template>
   </category>
@@ -458,8 +450,7 @@
   <category>
     <pattern>SEARCH WEATHER PORTLAND MAINE</pattern>
     <template>
-      <sraix service="pannous">SEARCH WEATHER PORTLAND
-      MAINE</sraix>
+      <sraix service="pannous">SEARCH WEATHER PORTLAND MAINE</sraix>
     </template>
   </category>
   <category>
@@ -1060,16 +1051,14 @@
   <category>
     <pattern>WHO IS THE PRIME MINISTER OF *</pattern>
     <template>
-      <sraix service="pannous">WHO IS THE CURRENT PRIME MINISTER OF
-      
+      <sraix service="pannous">WHO IS THE CURRENT PRIME MINISTER OF 
       <star /></sraix>
     </template>
   </category>
   <category>
     <pattern>WHO IS THE PRIME MINISTER OF MALAYSIA</pattern>
     <template>
-      <sraix service="pannous">WHO IS THE CURRENT PRIME MINISTER OF
-      MALAYSIA</sraix>
+      <sraix service="pannous">WHO IS THE CURRENT PRIME MINISTER OF MALAYSIA</sraix>
     </template>
   </category>
   <category>
@@ -1089,30 +1078,25 @@
   <category>
     <pattern>WHO IS THE PRESIDENT OF THE UNITED STATES</pattern>
     <template>
-      <sraix service="pannous">WHO IS THE CURRENT PRESIDENT OF THE
-      UNITED STATES</sraix>
+      <sraix service="pannous">WHO IS THE CURRENT PRESIDENT OF THE UNITED STATES</sraix>
     </template>
   </category>
   <category>
-    <pattern>WHO IS THE PRESIDENT OF THE UNITED STATES OF
-    AMERICA</pattern>
+    <pattern>WHO IS THE PRESIDENT OF THE UNITED STATES OF AMERICA</pattern>
     <template>
-      <sraix service="pannous">WHO IS THE CURRENT PRESIDENT OF THE
-      UNITED STATES OF AMERICA</sraix>
+      <sraix service="pannous">WHO IS THE CURRENT PRESIDENT OF THE UNITED STATES OF AMERICA</sraix>
     </template>
   </category>
   <category>
     <pattern>WHO IS THE PRESIDENT OF UNITED STATES</pattern>
     <template>
-      <sraix service="pannous">WHO IS THE CURRENT PRESIDENT OF
-      UNITED STATES</sraix>
+      <sraix service="pannous">WHO IS THE CURRENT PRESIDENT OF UNITED STATES</sraix>
     </template>
   </category>
   <category>
     <pattern>WHO IS THE PRESIDENT OF AMERICA</pattern>
     <template>
-      <sraix service="pannous">WHO IS THE CURRENT PRESIDENT OF
-      AMERICA</sraix>
+      <sraix service="pannous">WHO IS THE CURRENT PRESIDENT OF AMERICA</sraix>
     </template>
   </category>
   <category>
@@ -1127,8 +1111,7 @@
   <category>
     <pattern>WHO IS THE FRENCH PRESIDENT</pattern>
     <template>
-      <sraix service="pannous">WHO IS THE CURRENT PRESIDENT OF
-      FRANCE</sraix>
+      <sraix service="pannous">WHO IS THE CURRENT PRESIDENT OF FRANCE</sraix>
     </template>
   </category>
   <category>
@@ -1442,8 +1425,7 @@
   <category>
     <pattern>WILL ROBOTS TAKE OVER THE WORLD</pattern>
     <template>
-      <sraix service="pannous">WILL ROBOTS TAKE OVER THE
-      WORLD</sraix>
+      <sraix service="pannous">WILL ROBOTS TAKE OVER THE WORLD</sraix>
     </template>
   </category>
   <category>
@@ -1513,8 +1495,7 @@
   <category>
     <pattern>WAKE ME UP TOMORROW AT *</pattern>
     <template>
-      <srai>ALARMMESSAGE Wake up ALARMREQUEST WAKE ME UP TOMORROW
-      AT 
+      <srai>ALARMMESSAGE Wake up ALARMREQUEST WAKE ME UP TOMORROW AT 
       <star /></srai>
     </template>
   </category>
@@ -1692,8 +1673,7 @@
   <category>
     <pattern>WHEN IS THE WORLD GOING TO END</pattern>
     <template>
-      <sraix service="pannous">WHEN IS THE WORLD GOING TO
-      END</sraix>
+      <sraix service="pannous">WHEN IS THE WORLD GOING TO END</sraix>
     </template>
   </category>
   <category>
@@ -1842,11 +1822,9 @@
     </template>
   </category>
   <category>
-    <pattern>WHAT WORD CAN YOU MAKE FROM THE INITIAL LETTERS OF
-    *</pattern>
+    <pattern>WHAT WORD CAN YOU MAKE FROM THE INITIAL LETTERS OF *</pattern>
     <template>
-      <sraix service="pannous">WHAT WORD CAN YOU MAKE FROM THE
-      INITIAL LETTERS OF 
+      <sraix service="pannous">WHAT WORD CAN YOU MAKE FROM THE INITIAL LETTERS OF 
       <star /></sraix>
     </template>
   </category>
@@ -1960,8 +1938,7 @@
   <category>
     <pattern>WHAT ARE THE LATEST HEADLINES</pattern>
     <template>
-      <sraix service="pannous">WHAT ARE THE LATEST
-      HEADLINES</sraix>
+      <sraix service="pannous">WHAT ARE THE LATEST HEADLINES</sraix>
     </template>
   </category>
   <category>
@@ -2132,8 +2109,7 @@
   <category>
     <pattern>WHAT IS ARTIFICIAL INTELLIGENCE</pattern>
     <template>
-      <sraix service="pannous">WHAT IS ARTIFICIAL
-      INTELLIGENCE</sraix>
+      <sraix service="pannous">WHAT IS ARTIFICIAL INTELLIGENCE</sraix>
     </template>
   </category>
   <category>
@@ -2302,8 +2278,7 @@
   <category>
     <pattern>WHAT IS THE WEATHER FOR TODAY</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER FOR
-      TODAY</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER FOR TODAY</sraix>
     </template>
   </category>
   <category>
@@ -2316,15 +2291,13 @@
   <category>
     <pattern>WHAT IS THE WEATHER FOR TOMORROW</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER FOR
-      TOMORROW</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER FOR TOMORROW</sraix>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER RIGHT NOW</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER RIGHT
-      NOW</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER RIGHT NOW</sraix>
     </template>
   </category>
   <category>
@@ -2350,15 +2323,13 @@
   <category>
     <pattern>WHAT IS THE WEATHER GOING TO BE LIKE TODAY</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER GOING TO BE LIKE
-      TODAY</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER GOING TO BE LIKE TODAY</sraix>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER GOING TO BE LIKE IN *</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER GOING TO BE LIKE
-      IN 
+      <sraix service="pannous">WHAT IS THE WEATHER GOING TO BE LIKE IN 
       <star /></sraix>
     </template>
   </category>
@@ -2378,8 +2349,7 @@
   <category>
     <pattern>WHAT IS THE WEATHER IN LONDON</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER IN
-      LONDON</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER IN LONDON</sraix>
     </template>
   </category>
   <category>
@@ -2398,29 +2368,25 @@
   <category>
     <pattern>WHAT IS THE WEATHER LIKE FOR TODAY</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER LIKE FOR
-      TODAY</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER LIKE FOR TODAY</sraix>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE FOR TOMORROW</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER LIKE FOR
-      TOMORROW</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER LIKE FOR TOMORROW</sraix>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE TODAY</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER LIKE
-      TODAY</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER LIKE TODAY</sraix>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE IN NEW YORK</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER LIKE IN NEW
-      YORK</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER LIKE IN NEW YORK</sraix>
     </template>
   </category>
   <category>
@@ -2440,22 +2406,19 @@
   <category>
     <pattern>WHAT IS THE WEATHER LIKE HERE</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER LIKE
-      HERE</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER LIKE HERE</sraix>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE OUTSIDE</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER LIKE
-      OUTSIDE</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER LIKE OUTSIDE</sraix>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE TOMORROW</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE WEATHER LIKE
-      TOMORROW</sraix>
+      <sraix service="pannous">WHAT IS THE WEATHER LIKE TOMORROW</sraix>
     </template>
   </category>
   <category>
@@ -2492,8 +2455,7 @@
   <category>
     <pattern>WHAT IS THE CAPITAL OF PAKISTAN</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE CAPITAL OF
-      PAKISTAN</sraix>
+      <sraix service="pannous">WHAT IS THE CAPITAL OF PAKISTAN</sraix>
     </template>
   </category>
   <category>
@@ -2553,8 +2515,7 @@
   <category>
     <pattern>WHAT IS THE DISTANCE TO THE MOON</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE DISTANCE TO THE
-      MOON</sraix>
+      <sraix service="pannous">WHAT IS THE DISTANCE TO THE MOON</sraix>
     </template>
   </category>
   <category>
@@ -2609,8 +2570,7 @@
   <category>
     <pattern>WHAT IS THE TALLEST BUILDING IN THE WORLD</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE TALLEST BUILDING IN THE
-      WORLD</sraix>
+      <sraix service="pannous">WHAT IS THE TALLEST BUILDING IN THE WORLD</sraix>
     </template>
   </category>
   <category>
@@ -2623,8 +2583,7 @@
   <category>
     <pattern>WHAT IS THE HIGHEST MOUNTAIN IN THE WORLD</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE HIGHEST MOUNTAIN IN THE
-      WORLD</sraix>
+      <sraix service="pannous">WHAT IS THE HIGHEST MOUNTAIN IN THE WORLD</sraix>
     </template>
   </category>
   <category>
@@ -2664,8 +2623,7 @@
   <category>
     <pattern>WHAT IS THE FASTEST CAR IN THE WORLD</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE FASTEST CAR IN THE
-      WORLD</sraix>
+      <sraix service="pannous">WHAT IS THE FASTEST CAR IN THE WORLD</sraix>
     </template>
   </category>
   <category>
@@ -2705,15 +2663,13 @@
   <category>
     <pattern>WHAT IS THE POPULATION OF FRANCE</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE POPULATION OF
-      FRANCE</sraix>
+      <sraix service="pannous">WHAT IS THE POPULATION OF FRANCE</sraix>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE POPULATION OF CHINA</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE POPULATION OF
-      CHINA</sraix>
+      <sraix service="pannous">WHAT IS THE POPULATION OF CHINA</sraix>
     </template>
   </category>
   <category>
@@ -2726,8 +2682,7 @@
   <category>
     <pattern>WHAT IS THE POPULATION OF UNITED STATES</pattern>
     <template>
-      <sraix service="pannous">WHAT IS THE POPULATION OF UNITED
-      STATES</sraix>
+      <sraix service="pannous">WHAT IS THE POPULATION OF UNITED STATES</sraix>
     </template>
   </category>
   <category>
@@ -2964,8 +2919,7 @@
   <category>
     <pattern>WHAT WILL THE WEATHER BE LIKE TOMORROW</pattern>
     <template>
-      <sraix service="pannous">WHAT WILL THE WEATHER BE LIKE
-      TOMORROW</sraix>
+      <sraix service="pannous">WHAT WILL THE WEATHER BE LIKE TOMORROW</sraix>
     </template>
   </category>
   <category>
@@ -3611,8 +3565,7 @@
   <category>
     <pattern>HOW IS THE WEATHER LIKE TODAY IN NEW DELHI</pattern>
     <template>
-      <sraix service="pannous">HOW IS THE WEATHER LIKE TODAY IN NEW
-      DELHI</sraix>
+      <sraix service="pannous">HOW IS THE WEATHER LIKE TODAY IN NEW DELHI</sraix>
     </template>
   </category>
   <category>
@@ -4186,8 +4139,7 @@
   <category>
     <pattern>WHO IS THE PRIME MINISTER OF INDIA</pattern>
     <template>
-      <sraix service="pannous">WHO IS THE PRIME MINISTER OF
-      INDIA</sraix>
+      <sraix service="pannous">WHO IS THE PRIME MINISTER OF INDIA</sraix>
     </template>
   </category>
   <category>

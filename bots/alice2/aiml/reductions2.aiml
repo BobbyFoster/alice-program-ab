@@ -773,8 +773,7 @@
   <category>
     <pattern>LAST UPDATE</pattern>
     <template>My last brian update was 
-    <srai>BUILD</srai>. My information from web services is more
-    current.</template>
+    <srai>BUILD</srai>. My information from web services is more current.</template>
   </category>
   <category>
     <pattern>LET US GET * DELIVERED</pattern>

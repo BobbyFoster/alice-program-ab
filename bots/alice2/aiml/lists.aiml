@@ -352,8 +352,7 @@ List value=<srai><get name="listname"/></srai>.
         <think>
           <set name="topic">REMOVE LIST ITEM</set>
         </think>I couldn't find 
-        <star />on your list. Which item would you like to
-        remove?</li>
+        <star />on your list. Which item would you like to remove?</li>
       </condition>
     </template>
   </category>

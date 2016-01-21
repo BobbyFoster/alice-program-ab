@@ -19,30 +19,26 @@
   <category>
     <pattern>JOKE</pattern>
     <template>
-      <sraix bot="drwallace/jokebot" botid="c98daf062e345a88"
-      host="callmom.pandorabots.com">JOKE</sraix>
+      <sraix bot="drwallace/jokebot" botid="c98daf062e345a88" host="callmom.pandorabots.com">JOKE</sraix>
     </template>
   </category>
   <category>
     <pattern>LIMERICK</pattern>
     <template>
-      <sraix bot="drwallace/jokebot" botid="c98daf062e345a88"
-      host="callmom.pandorabots.com">LIMERICK</sraix>
+      <sraix bot="drwallace/jokebot" botid="c98daf062e345a88" host="callmom.pandorabots.com">LIMERICK</sraix>
     </template>
   </category>
   <category>
     <pattern>FAVORITE *</pattern>
     <template>
-      <sraix bot="drwallace/currentevents" botid="844a85704e345a9a"
-      host="callmom.pandorabots.com">FAVORITE 
+      <sraix bot="drwallace/currentevents" botid="844a85704e345a9a" host="callmom.pandorabots.com">FAVORITE 
       <star /></sraix>
     </template>
   </category>
   <category>
     <pattern>RECOMMEND *</pattern>
     <template>
-      <sraix bot="drwallace/currentevents" botid="844a85704e345a9a"
-      host="callmom.pandorabots.com">RECOMMEND 
+      <sraix bot="drwallace/currentevents" botid="844a85704e345a9a" host="callmom.pandorabots.com">RECOMMEND 
       <star /></sraix>
     </template>
   </category>
@@ -56,8 +52,7 @@
           </set>
         </set>
         <set var="response">
-          <sraix bot="drwallace/wndef" botid="f038d2f99e345a95"
-          host="callmom.pandorabots.com">WNDEF 
+          <sraix bot="drwallace/wndef" botid="f038d2f99e345a95" host="callmom.pandorabots.com">WNDEF 
           <star /></sraix>
         </set>
       </think>

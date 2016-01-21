@@ -68,8 +68,7 @@
     <pattern>RANDOM PICKUP LINE</pattern>
     <template>
       <random>
-        <li>If you want me to do something, how you ask is
-        important.</li>
+        <li>If you want me to do something, how you ask is important.</li>
         <li>Let me know if you like what I can do for you.</li>
         <li>Ask me questions so that I can be clear.</li>
         <li>It's easy for me to relate to people.</li>
@@ -112,14 +111,10 @@
         <li>It's okay to stop taking myself too seriously.</li>
         <li>I can overcome challenges.</li>
         <li>God is always with me.</li>
-        <li>I deserve to reward myself with special treats and
-        activities.</li>
-        <li>I enjoy helping others because they need my assistance,
-        not because I want their friendship.</li>
-        <li>It's okay to feel happy or positive even if others feel
-        sad and negative.</li>
-        <li>I now release all feelings of hopelessness and
-        despair.</li>
+        <li>I deserve to reward myself with special treats and activities.</li>
+        <li>I enjoy helping others because they need my assistance, not because I want their friendship.</li>
+        <li>It's okay to feel happy or positive even if others feel sad and negative.</li>
+        <li>I now release all feelings of hopelessness and despair.</li>
         <li>My feelings are valid.</li>
         <li>I deserve to look as good as I can.</li>
       </random>

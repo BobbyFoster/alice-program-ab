@@ -355,13 +355,11 @@
       <condition var="gendername">
         <li value="F">
           <condition value="M" var="genderpred">Isn't 
-          <get name="contactname" />usually a female
-          name?</condition>
+          <get name="contactname" />usually a female name?</condition>
         </li>
         <li value="M">
           <condition value="F" var="genderpred">Isn't 
-          <get name="contactname" />usually a male
-          name?</condition>
+          <get name="contactname" />usually a male name?</condition>
         </li>
       </condition>
     </template>

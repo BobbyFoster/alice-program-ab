@@ -77,8 +77,7 @@
   </category>
   <category>
     <pattern>PROGRAM VERSION</pattern>
-    <template>Program AB 0.0.6.24 beta -- AI Foundation Reference
-    AIML 2.1 implementation</template>
+    <template>Program AB 0.0.6.24 beta -- AI Foundation Reference AIML 2.1 implementation</template>
   </category>
   <category>
     <pattern>BRAIN BUILD</pattern>

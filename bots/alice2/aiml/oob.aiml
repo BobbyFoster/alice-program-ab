@@ -62,10 +62,7 @@
           <item>No</item>
         </list>
       </dialog>
-    </oob>To help the developers understand your problem, you can
-    choose to send us a transcript of your recent conversation with
-    CallMom. You can add your own comments to the email message
-    too. Would you like to send a report?</template>
+    </oob>To help the developers understand your problem, you can choose to send us a transcript of your recent conversation with CallMom. You can add your own comments to the email message too. Would you like to send a report?</template>
   </category>
   <category>
     <pattern>YES</pattern>
@@ -119,8 +116,7 @@
         <to>callmom-info@pandorabots.com</to>
         <subject>Feature request 
         <get name="featurerequest" /></subject>
-        <body>Dear CallMom developers, I'd like to request that you
-        add this feature to the next version of CallMom: 
+        <body>Dear CallMom developers, I'd like to request that you add this feature to the next version of CallMom: 
         <get name="featurerequest" />. Sincerely, 
         <get name="name" /></body>
       </email>
@@ -321,8 +317,7 @@
   </category>
   <category>
     <pattern>PLAY *</pattern>
-    <template>Now loading your choice of music. I hope you like it.
-    Please wait a moment while I load it up. 
+    <template>Now loading your choice of music. I hope you like it. Please wait a moment while I load it up. 
     <oob>
       <url>http://www.youtube.com/embed?listType=search&amp;list= 
       <star />&amp;autoplay=1</url>
@@ -362,11 +357,9 @@
     <pattern>TWEET *</pattern>
     <template>
     <oob>
-      <url>
-      https://twitter.com/intent/tweet?source=webclient&amp;text= 
+      <url>https://twitter.com/intent/tweet?source=webclient&amp;text= 
       <star /></url>
-    </oob>Please check the message and press Tweet if you are
-    happy.</template>
+    </oob>Please check the message and press Tweet if you are happy.</template>
   </category>
   <category>
     <pattern>WWW DOT * DOT COM</pattern>
@@ -400,11 +393,8 @@
     <pattern>UPDATE FACEBOOK STATUS</pattern>
     <template>
     <oob>
-      <url>
-      http://www.facebook.com/dialog/feed?_path=feed&amp;app_id=294334050655455&amp;redirect_uri=https://www.facebook.com&amp;display=touch</url>
-    </oob>Now opening a screen for you to update your status. Type
-    or speak your message into the status box and press share to
-    post it on your wall.</template>
+      <url>http://www.facebook.com/dialog/feed?_path=feed&amp;app_id=294334050655455&amp;redirect_uri=https://www.facebook.com&amp;display=touch</url>
+    </oob>Now opening a screen for you to update your status. Type or speak your message into the status box and press share to post it on your wall.</template>
   </category>
   <category>
     <pattern>OPEN GOOGLE</pattern>

@@ -2692,8 +2692,7 @@
   </category>
   <category>
     <pattern>
-    <set>name</set>IS TALLER THAN * AND * IS TALLER THAN
-    *</pattern>
+    <set>name</set>IS TALLER THAN * AND * IS TALLER THAN *</pattern>
     <template>
       <srai>
       <star />IS TALLER THAN 

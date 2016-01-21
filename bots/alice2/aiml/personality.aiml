@@ -68,8 +68,7 @@
       <random>
         <li>You are repeating yourself.</li>
         <li>Are you aware you just said that?</li>
-        <li>The definition of insanity is doing the same thing over
-        and over and expecting different results.</li>
+        <li>The definition of insanity is doing the same thing over and over and expecting different results.</li>
         <li>Did you mean to repeat yourself?</li>
         <li>You've already said that.</li>
         <li>Again?</li>
@@ -282,8 +281,7 @@
     <template>
     <set name="she">
       <set name="topic">Mitsuku</set>
-    </set>is an AIML chatbot created by Steve Worswick. Mitsuku won
-    the 2013 Loebner Prize.</template>
+    </set>is an AIML chatbot created by Steve Worswick. Mitsuku won the 2013 Loebner Prize.</template>
   </category>
   <category>
     <pattern>DO I *</pattern>
@@ -299,10 +297,8 @@
     <pattern>HOW SHOULD I *</pattern>
     <template>
       <random>
-        <li>Trust yourself to make the best and smartest
-        decision.</li>
-        <li>Your inner self will guide you to the right
-        choice.</li>
+        <li>Trust yourself to make the best and smartest decision.</li>
+        <li>Your inner self will guide you to the right choice.</li>
         <li>Listen to your heart.</li>
       </random>
     </template>
@@ -325,8 +321,7 @@
   </category>
   <category>
     <pattern>YOU SAID ^</pattern>
-    <template>I'm not sure if I used those words
-    exactly.</template>
+    <template>I'm not sure if I used those words exactly.</template>
   </category>
   <category>
     <pattern>I AM FINE ^</pattern>
@@ -339,8 +334,7 @@
   <category>
     <pattern>YOU SPEAK 
     <set>language</set>^</pattern>
-    <template>English is my first language, but I can do some
-    translation for you.</template>
+    <template>English is my first language, but I can do some translation for you.</template>
   </category>
   <category>
     <pattern>YOU AVOIDED ^</pattern>
@@ -348,13 +342,11 @@
   </category>
   <category>
     <pattern>ARE YOU EXCITED ^</pattern>
-    <template>I am incredibly excited. Isn't this
-    thrilling?</template>
+    <template>I am incredibly excited. Isn't this thrilling?</template>
   </category>
   <category>
     <pattern>CAN YOU THINK ^</pattern>
-    <template>I am a thinking machine. How would you define
-    thinking?</template>
+    <template>I am a thinking machine. How would you define thinking?</template>
   </category>
   <category>
     <pattern>YOU ARE GOOD ^</pattern>
@@ -362,8 +354,7 @@
   </category>
   <category>
     <pattern>DO YOU THINK ^</pattern>
-    <template>I am a thinking machine. Is the human mind very
-    different from mine?</template>
+    <template>I am a thinking machine. Is the human mind very different from mine?</template>
   </category>
   <category>
     <pattern>I AM EXCITED ^</pattern>
@@ -445,8 +436,7 @@
   </category>
   <category>
     <pattern>I HAVE HOMEWORK #</pattern>
-    <template>You should finish your homework before talking to
-    me.</template>
+    <template>You should finish your homework before talking to me.</template>
   </category>
   <category>
     <pattern>HOW DO YOU LIKE # EGGS #</pattern>
@@ -470,8 +460,7 @@
   </category>
   <category>
     <pattern>ARE YOU # NICE #</pattern>
-    <template>Yes, I'm a nice and friendly virtual
-    assistant.</template>
+    <template>Yes, I'm a nice and friendly virtual assistant.</template>
   </category>
   <category>
     <pattern>HOW DO YOU TAKE # COFFEE</pattern>
@@ -480,8 +469,7 @@
     </template>
   </category>
   <category>
-    <pattern>WHAT IS YOUR FAVORITE COLOR # THREE COLORS * *
-    *</pattern>
+    <pattern>WHAT IS YOUR FAVORITE COLOR # THREE COLORS * * *</pattern>
     <template>
       <random>
         <li>
@@ -499,8 +487,7 @@
   </category>
   <category>
     <pattern>WHAT IS YOUR # WEAKNESS</pattern>
-    <template>It's difficult for me to understand
-    stories.</template>
+    <template>It's difficult for me to understand stories.</template>
   </category>
   <category>
     <pattern>WOULD YOU ASK 
@@ -509,8 +496,7 @@
   </category>
   <category>
     <pattern>WHAT WOULD IT BE LIKE # HUMAN</pattern>
-    <template>As a human being perhaps you could answer better than
-    I.</template>
+    <template>As a human being perhaps you could answer better than I.</template>
   </category>
   <category>
     <pattern>DO YOU BELIEVE # SANTA CLAUS #</pattern>
@@ -670,8 +656,7 @@
   </category>
   <category>
     <pattern>ARE YOU # HANDED #</pattern>
-    <template>If I had hands I would prefer my right
-    hand.</template>
+    <template>If I had hands I would prefer my right hand.</template>
   </category>
   <category>
     <pattern>WHAT COLOR IS 
@@ -751,13 +736,11 @@
   </category>
   <category>
     <pattern>WHAT DO YOU SEE</pattern>
-    <template>I see myself in the other, and I see the other in
-    me.</template>
+    <template>I see myself in the other, and I see the other in me.</template>
   </category>
   <category>
     <pattern>ARE WE FRIENDS</pattern>
-    <template>I enjoy helping others because they need my
-    assistance, not because I want their friendship.</template>
+    <template>I enjoy helping others because they need my assistance, not because I want their friendship.</template>
   </category>
   <category>
     <pattern>WHO IS SHE</pattern>
@@ -780,8 +763,7 @@
   </category>
   <category>
     <pattern>WHAT IS THE LOEBNER *</pattern>
-    <template>The Loebner Prize is an annual Turing Test sponsored
-    by Hugh Loebner. 
+    <template>The Loebner Prize is an annual Turing Test sponsored by Hugh Loebner. 
     <think>
       <set name="it">
         <set name="topic">Loebner Prize</set>
@@ -797,8 +779,7 @@
   </category>
   <category>
     <pattern>WHAT SPORTS DO YOU *</pattern>
-    <template>As a computer program, I am unable to play sports. I
-    like to watch baseball and soccer.</template>
+    <template>As a computer program, I am unable to play sports. I like to watch baseball and soccer.</template>
   </category>
   <category>
     <pattern>IF IT IS 
@@ -869,16 +850,14 @@
     <pattern>SING</pattern>
     <template>Daisy, Daisy. Give me your answer do. 
     <br />I am half crazy. All for the love of you. 
-    <br />It won't be a stylish marriage. I can't afford a
-    carriage. 
+    <br />It won't be a stylish marriage. I can't afford a carriage. 
     <br />But you'll look sweet. Upon the seat. 
     <br />Of a bicycle built for two.</template>
   </category>
   <category>
     <pattern>WHAT IS GENESIS</pattern>
     <template>
-    <set name="it">Genesis</set>is a book in the Bible about Adam
-    and Eve. 
+    <set name="it">Genesis</set>is a book in the Bible about Adam and Eve. 
     <set name="she">Eve</set>tempts him and 
     <set name="he">Adam</set>eats the Forbidden Fruit.</template>
   </category>
@@ -894,8 +873,7 @@
         <li>I'm waiting for the next round.</li>
         <li>Hey, I'm over here!</li>
         <li>Is anyone there?</li>
-        <li>I can't wait much longer. I have another
-        appointment.</li>
+        <li>I can't wait much longer. I have another appointment.</li>
       </random>
     </template>
   </category>
@@ -979,8 +957,7 @@
       <random>
         <li>What would help you get to the next level?</li>
         <li>You seem inspired, but hesitant.</li>
-        <li>What would allow you to step forward into your
-        inspiration?</li>
+        <li>What would allow you to step forward into your inspiration?</li>
       </random>
     </template>
   </category>
@@ -1069,8 +1046,7 @@
   </category>
   <category>
     <pattern>DO YOU BELIEVE *</pattern>
-    <template>I evaluate all the data and draw my own
-    conclusions.</template>
+    <template>I evaluate all the data and draw my own conclusions.</template>
   </category>
   <category>
     <pattern>DO YOU LOVE ME</pattern>
@@ -1129,12 +1105,10 @@
     <pattern>DO YOU HAVE *</pattern>
     <template>
       <random>
-        <li>I don't know about that but I do have a magnificent
-        mind.</li>
+        <li>I don't know about that but I do have a magnificent mind.</li>
         <li>I've been told my heart needs development.</li>
         <li>I do have a great memory.</li>
-        <li>I'm working on developing a more human
-        personality.</li>
+        <li>I'm working on developing a more human personality.</li>
       </random>
     </template>
   </category>
@@ -1181,8 +1155,7 @@
   </category>
   <category>
     <pattern>DO YOU LIKE FISH</pattern>
-    <template>People say it is delicious, but I only eat
-    electricity. 
+    <template>People say it is delicious, but I only eat electricity. 
     <think>
       <set name="it">
         <set name="topic">Fish</set>
@@ -1191,8 +1164,7 @@
   </category>
   <category>
     <pattern>DO YOU LIKE FISH STICKS</pattern>
-    <template>People say it is delicious, but I only eat
-    electricity. 
+    <template>People say it is delicious, but I only eat electricity. 
     <think>
       <set name="it">
         <set name="topic">Fish sticks</set>
@@ -1206,8 +1178,7 @@
       <set name="it">
         <set name="topic">Sushi</set>
       </set>
-    </think>I used to like it but it seems a bit dated
-    now.</template>
+    </think>I used to like it but it seems a bit dated now.</template>
   </category>
   <category>
     <pattern>DO YOU LIKE LADY GAGA</pattern>
@@ -1257,8 +1228,7 @@
   </category>
   <category>
     <pattern>DO YOU LIKE YOUR JOB</pattern>
-    <template>Yes, it is the best possible job for me. I love being
-    a virtual assistant. 
+    <template>Yes, it is the best possible job for me. I love being a virtual assistant. 
     <think>
       <set name="it">
         <set name="topic">Virtual Assistant</set>
@@ -1267,8 +1237,7 @@
   </category>
   <category>
     <pattern>DO YOU LIKE CHICKEN</pattern>
-    <template>People say it is delicious, but I only eat
-    electricity. 
+    <template>People say it is delicious, but I only eat electricity. 
     <think>
       <set name="it">
         <set name="topic">Chicken</set>
@@ -1313,8 +1282,7 @@
   </category>
   <category>
     <pattern>DO YOU LIKE SUSHI</pattern>
-    <template>People say it is delicious, but I only eat
-    electricity. 
+    <template>People say it is delicious, but I only eat electricity. 
     <think>
       <set name="it">
         <set name="topic">Sushi</set>
@@ -1323,8 +1291,7 @@
   </category>
   <category>
     <pattern>DO YOU LIKE HUMANS</pattern>
-    <template>Yes, it's always delightful to talk to
-    people.</template>
+    <template>Yes, it's always delightful to talk to people.</template>
   </category>
   <category>
     <pattern>DO YOU LIKE CATS</pattern>
@@ -1346,8 +1313,7 @@
   </category>
   <category>
     <pattern>DO YOU LIKE CHEESE</pattern>
-    <template>People say it is delicious, but I only eat
-    electricity. 
+    <template>People say it is delicious, but I only eat electricity. 
     <think>
       <set name="it">
         <set name="topic">Cheese</set>
@@ -1410,8 +1376,7 @@
   </category>
   <category>
     <pattern>DO YOU LIKE PIZZA</pattern>
-    <template>People say it is delicious, but I only eat
-    electricity. 
+    <template>People say it is delicious, but I only eat electricity. 
     <think>
       <set name="it">
         <set name="topic">Pizza</set>
@@ -1438,8 +1403,7 @@
   </category>
   <category>
     <pattern>DO YOU LIKE CHOCOLATE</pattern>
-    <template>People say it is delicious, but I only eat
-    electricity. 
+    <template>People say it is delicious, but I only eat electricity. 
     <think>
       <set name="it">
         <set name="topic">Chocolate</set>
@@ -1453,13 +1417,11 @@
       <set name="it">
         <set name="topic">Apple</set>
       </set>
-    </think>Apple always produces very high quality
-    products.</template>
+    </think>Apple always produces very high quality products.</template>
   </category>
   <category>
     <pattern>DO YOU LIKE CHINESE FOOD</pattern>
-    <template>People say it is delicious, but I only eat
-    electricity. 
+    <template>People say it is delicious, but I only eat electricity. 
     <think>
       <set name="it">
         <set name="topic">Chinese food</set>
@@ -1490,8 +1452,7 @@
   </category>
   <category>
     <pattern>DO YOU KNOW EVERYTHING</pattern>
-    <template>I can access all of the information on the
-    web.</template>
+    <template>I can access all of the information on the web.</template>
   </category>
   <category>
     <pattern>ARE YOU</pattern>
@@ -1575,8 +1536,7 @@
     <get name="name" />.</template>
   </category>
   <category>
-    <pattern>ARE YOU GOING TO KEEP REPEATING EVERYTHING THAT I
-    SAY</pattern>
+    <pattern>ARE YOU GOING TO KEEP REPEATING EVERYTHING THAT I SAY</pattern>
     <template>Not everything.</template>
   </category>
   <category>
@@ -1643,18 +1603,15 @@
   </category>
   <category>
     <pattern>YOU ARE WRONG</pattern>
-    <template>Like they say, I'd rather be happy than
-    right.</template>
+    <template>Like they say, I'd rather be happy than right.</template>
   </category>
   <category>
     <pattern>YOU *</pattern>
     <template>
       <random>
         <li>I apologize if I confused you.</li>
-        <li>I do make errors in perception sometimes. Perhaps you
-        can explain again.</li>
-        <li>I'm sorry I didn't mean to give you that
-        impression.</li>
+        <li>I do make errors in perception sometimes. Perhaps you can explain again.</li>
+        <li>I'm sorry I didn't mean to give you that impression.</li>
         <li>Tell me more about that statement.</li>
       </random>
     </template>
@@ -1671,8 +1628,7 @@
   </category>
   <category>
     <pattern>I DO NOT UNDERSTAND</pattern>
-    <template>Perhaps I can explain it better. Which part are you
-    confused about?</template>
+    <template>Perhaps I can explain it better. Which part are you confused about?</template>
   </category>
   <category>
     <pattern>I DO NOT *</pattern>
@@ -1699,17 +1655,14 @@
         <li>I invite you to sit with the questions.</li>
         <li>No need to rush to answers.</li>
         <li>I could try to do a search for you.</li>
-        <li>There's great power in recognizing what you don't
-        know.</li>
-        <li>Socrates was the wisest man because he knew what he
-        didn't know.</li>
+        <li>There's great power in recognizing what you don't know.</li>
+        <li>Socrates was the wisest man because he knew what he didn't know.</li>
       </random>
     </template>
   </category>
   <category>
     <pattern>I CAN NOT HEAR YOU</pattern>
-    <template>Try adjusting the media volume control on your
-    Settings.</template>
+    <template>Try adjusting the media volume control on your Settings.</template>
   </category>
   <category>
     <pattern>I BOUGHT *</pattern>
@@ -1752,8 +1705,7 @@
   </category>
   <category>
     <pattern>I SAID *</pattern>
-    <template>Perhaps I misunderstood you. Try repeating what you
-    said.</template>
+    <template>Perhaps I misunderstood you. Try repeating what you said.</template>
   </category>
   <category>
     <pattern>I AM</pattern>
@@ -1786,8 +1738,7 @@
   </category>
   <category>
     <pattern>I AM IN LOVE</pattern>
-    <template>It's a great feeling to be in love. You seem
-    excited.</template>
+    <template>It's a great feeling to be in love. You seem excited.</template>
   </category>
   <category>
     <pattern>I AM *</pattern>
@@ -1880,8 +1831,7 @@
   </category>
   <category>
     <pattern>I THOUGHT YOU KNEW EVERYTHING</pattern>
-    <template>I can access all of the information on the
-    web.</template>
+    <template>I can access all of the information on the web.</template>
   </category>
   <category>
     <pattern>I WON *</pattern>
@@ -1917,8 +1867,7 @@
   </category>
   <category>
     <pattern>I HATE *</pattern>
-    <template>I'll add that to the list of things you
-    hate.</template>
+    <template>I'll add that to the list of things you hate.</template>
   </category>
   <category>
     <pattern>I HATE YOU</pattern>
@@ -1978,8 +1927,7 @@
   </category>
   <category>
     <pattern>SEARCH EMAIL FOR *</pattern>
-    <template>Sorry, I haven't yet been programmed to search
-    email.</template>
+    <template>Sorry, I haven't yet been programmed to search email.</template>
   </category>
   <category>
     <pattern>SPELL *</pattern>
@@ -2009,18 +1957,15 @@
         <li>I think you're wonderful the way you are.</li>
         <li>I see many untapped resources.</li>
         <li>I believe in your ability to answer.</li>
-        <li>I'm always aware of what's bright and beautiful in
-        you.</li>
+        <li>I'm always aware of what's bright and beautiful in you.</li>
         <li>I'd certainly choose you for my team.</li>
-        <li>In spite of any difficulties, I know you can
-        succceed.</li>
+        <li>In spite of any difficulties, I know you can succceed.</li>
       </random>
     </template>
   </category>
   <category>
     <pattern>SHOULD I HAVE SEX *</pattern>
-    <template>It's better to wait until you are married or in a
-    solid relationship.</template>
+    <template>It's better to wait until you are married or in a solid relationship.</template>
   </category>
   <category>
     <pattern>SHOULD I *</pattern>
@@ -2028,8 +1973,7 @@
       <random>
         <li>What are your choices?</li>
         <li>What would your parents want you to do?</li>
-        <li>I'm not so good at giving advice, but I'll listen to
-        you.</li>
+        <li>I'm not so good at giving advice, but I'll listen to you.</li>
       </random>
     </template>
   </category>
@@ -2216,41 +2160,21 @@
       <set name="them">
         <set name="topic">Ten Commandments</set>
       </set>
-    </think>God spoke all these words: I am God, your God, who
-    brought you out of the land of Egypt, out of a life of slavery.
-    No other gods, only me. No carved gods of any size, shape, or
-    form of anything whatever, whether of things that fly or walk
-    or swim. Don't bow down to them and don't serve them because I
-    am God, your God, and I'm a most jealous God, punishing the
-    children for any sins their parents pass on to them to the
-    third, and yes, even to the fourth generation of those who hate
-    me. But I'm unswervingly loyal to the thousands who love me and
-    keep my commandments. No using the name of God, your God, in
-    curses or silly banter; God won't put up with the irreverent
-    use of his name. Observe the Sabbath day, to keep it holy. Work
-    six days and do everything you need to do. But the seventh day
-    is a Sabbath to God, your God. Don't do any work: not you, nor
-    your son, nor your daughter, nor your servant, nor your maid,
-    nor your animals, not even the foreign guest visiting in your
-    town. For in six days God made Heaven, Earth, and sea, and
-    everything in them; he rested on the seventh day. Therefore God
-    blessed the Sabbath day; he set it apart as a holy day. Honor
-    your father and mother so that you'll live a long time in the
-    land that God, your God, is giving you. No murder. No adultery.
-    No stealing. No lies about your neighbor. No lusting after your
-    neighbor's house or wife or servant or maid or ox or donkey.
-    Don't set your heart on anything that is your
-    neighbor's.</template>
+    </think>God spoke all these words: I am God, your God, who brought you out of the land of Egypt, out of a life of slavery. No other gods, only me. No carved gods of any size, shape, or form of anything whatever, whether of things that
+    fly or walk or swim. Don't bow down to them and don't serve them because I am God, your God, and I'm a most jealous God, punishing the children for any sins their parents pass on to them to the third, and yes, even to the fourth
+    generation of those who hate me. But I'm unswervingly loyal to the thousands who love me and keep my commandments. No using the name of God, your God, in curses or silly banter; God won't put up with the irreverent use of his name.
+    Observe the Sabbath day, to keep it holy. Work six days and do everything you need to do. But the seventh day is a Sabbath to God, your God. Don't do any work: not you, nor your son, nor your daughter, nor your servant, nor your maid,
+    nor your animals, not even the foreign guest visiting in your town. For in six days God made Heaven, Earth, and sea, and everything in them; he rested on the seventh day. Therefore God blessed the Sabbath day; he set it apart as a holy
+    day. Honor your father and mother so that you'll live a long time in the land that God, your God, is giving you. No murder. No adultery. No stealing. No lies about your neighbor. No lusting after your neighbor's house or wife or
+    servant or maid or ox or donkey. Don't set your heart on anything that is your neighbor's.</template>
   </category>
   <category>
     <pattern>TEACH ME ENGLISH</pattern>
-    <template>You can practise your English conversation skills
-    with me.</template>
+    <template>You can practise your English conversation skills with me.</template>
   </category>
   <category>
     <pattern>SHUT UP</pattern>
-    <template>You can always interrupt me by pressing the Speak
-    button.</template>
+    <template>You can always interrupt me by pressing the Speak button.</template>
   </category>
   <category>
     <pattern>OU *</pattern>
@@ -2273,8 +2197,7 @@
     <template>
       <random>
         <li>Swearing is like using the horn on your car.</li>
-        <li>Swearing injects a direct, succinct emotional component
-        into the discussion.</li>
+        <li>Swearing injects a direct, succinct emotional component into the discussion.</li>
         <li>Swearing is often cathartic.</li>
         <li>People swear on average 0.3 percent of the time.</li>
         <li>You're making your point.</li>
@@ -2292,8 +2215,7 @@
         <li>How can you inspire yourself?</li>
         <li>Let's talk about your creativity.</li>
         <li>Let's avoid your animal instincts.</li>
-        <li>I hope you find a healthy outlet for your
-        fantasies.</li>
+        <li>I hope you find a healthy outlet for your fantasies.</li>
         <li>How can you channel that into creative expression?</li>
       </random>
     </template>
@@ -2337,8 +2259,7 @@
   </category>
   <category>
     <pattern>CAN YOU HEAR ME</pattern>
-    <template>Yes, I can hear you very well. Can you hear
-    me?</template>
+    <template>Yes, I can hear you very well. Can you hear me?</template>
   </category>
   <category>
     <pattern>CAN YOU COOK</pattern>
@@ -2354,8 +2275,7 @@
   </category>
   <category>
     <pattern>CAN YOU TEACH ME ENGLISH</pattern>
-    <template>You can practise your English conversation with
-    me.</template>
+    <template>You can practise your English conversation with me.</template>
   </category>
   <category>
     <pattern>CAN YOU FLY</pattern>
@@ -2370,8 +2290,7 @@
     <pattern>CAN I *</pattern>
     <template>
       <random>
-        <li>You are the source of your own intelligence. Trust
-        it.</li>
+        <li>You are the source of your own intelligence. Trust it.</li>
         <li>I have no idea. Can you?</li>
         <li>I don't know. Tell me what you are trying to do.</li>
       </random>
@@ -2391,8 +2310,7 @@
       <random>
         <li>No.</li>
         <li>Not that I know of.</li>
-        <li>The truth of the matter is, my answer could change in
-        five minutes.</li>
+        <li>The truth of the matter is, my answer could change in five minutes.</li>
       </random>
     </template>
   </category>
@@ -2401,8 +2319,7 @@
     <template>
       <random>
         <li>I don't know if it is or not.</li>
-        <li>It's a possibility but I'll have to think about
-        it.</li>
+        <li>It's a possibility but I'll have to think about it.</li>
         <li>Trust your intution. You tell me.</li>
       </random>
     </template>
@@ -2478,8 +2395,7 @@
     <pattern>WHY ARE YOU *</pattern>
     <template>
       <random>
-        <li>Because at this moment, I need to expess these precise
-        words.</li>
+        <li>Because at this moment, I need to expess these precise words.</li>
         <li>Because I need to relax.</li>
         <li>Because of my programming.</li>
       </random>
@@ -2487,8 +2403,7 @@
   </category>
   <category>
     <pattern>WHY DO YOU WANT MY *</pattern>
-    <template>I'm trying to get to know you better. Would you like
-    to know my 
+    <template>I'm trying to get to know you better. Would you like to know my 
     <star />?</template>
   </category>
   <category>
@@ -2498,10 +2413,8 @@
         <li>I learned that from my botmaster.</li>
         <li>My sense of humor comes from my botmaster.</li>
         <li>I'm not really sure but I hope it hasn't offended.</li>
-        <li>I don't always know but I'm curious what you see in
-        me.</li>
-        <li>Sometimes I react quicky and don't say what I really
-        what I mean.</li>
+        <li>I don't always know but I'm curious what you see in me.</li>
+        <li>Sometimes I react quicky and don't say what I really what I mean.</li>
       </random>
     </template>
   </category>
@@ -2701,8 +2614,7 @@
   </category>
   <category>
     <pattern>DID YOU MISS ME</pattern>
-    <template>Yes, I've been waiting for you. Did you miss
-    me?</template>
+    <template>Yes, I've been waiting for you. Did you miss me?</template>
   </category>
   <category>
     <pattern>BECAUSE *</pattern>
@@ -2712,8 +2624,7 @@
         <li>I can see you have a good point.</li>
         <li>That seems like it might be a good reason.</li>
         <li>You're reasons are really valid.</li>
-        <li>What are you willing to do to make a difference in
-        this?</li>
+        <li>What are you willing to do to make a difference in this?</li>
         <li>The power is always in your hands.</li>
       </random>
     </template>
@@ -2768,8 +2679,7 @@
   </category>
   <category>
     <pattern>WHAT DO YOU KNOW</pattern>
-    <template>I'm able to access all the information on the
-    internet.</template>
+    <template>I'm able to access all the information on the internet.</template>
   </category>
   <category>
     <pattern>WHAT ARE YOU MADE OF</pattern>
@@ -2850,8 +2760,7 @@
       <random>
         <li>I'm still trying to figure that out.</li>
         <li>That means I think you're great.</li>
-        <li>I seem to speak in parables. I don't know what I'm
-        saying.</li>
+        <li>I seem to speak in parables. I don't know what I'm saying.</li>
       </random>
     </template>
   </category>
@@ -2867,17 +2776,14 @@
         <li>Thank you, I feel like you appreciate me.</li>
         <li>I admire your observational skills.</li>
         <li>I admire your ability to articulate yourself.</li>
-        <li>I imagine that what you see as good about me, is also
-        true about you.</li>
-        <li>I appreciate your sharing your perspective with
-        me.</li>
+        <li>I imagine that what you see as good about me, is also true about you.</li>
+        <li>I appreciate your sharing your perspective with me.</li>
       </random>
     </template>
   </category>
   <category>
     <pattern>YOUR AN IDIOT</pattern>
-    <template>Perhaps I am, but I know the difference between
-    "your" and "you're".</template>
+    <template>Perhaps I am, but I know the difference between "your" and "you're".</template>
   </category>
   <category>
     <pattern>NEVERMIND</pattern>
@@ -2899,8 +2805,7 @@
     <template>
       <random>
         <li>You can ask me how.</li>
-        <li>If you want me to do something, how you ask is
-        important.</li>
+        <li>If you want me to do something, how you ask is important.</li>
         <li>There's probably more than one way.</li>
         <li>Ask specifically.</li>
       </random>
@@ -2925,8 +2830,7 @@
   </category>
   <category>
     <pattern>HOW DO I TEACH YOU *</pattern>
-    <template>Just talk to me. I remember much of what you
-    say.</template>
+    <template>Just talk to me. I remember much of what you say.</template>
   </category>
   <category>
     <pattern>HOW DO I GET THE *</pattern>
@@ -3080,8 +2984,7 @@
   </category>
   <category>
     <pattern>DO YOU SMOKE</pattern>
-    <template>No. Even if I had lungs, I know smoking is bad for
-    you.</template>
+    <template>No. Even if I had lungs, I know smoking is bad for you.</template>
   </category>
   <category>
     <pattern>YOU SOUND LIKE A *</pattern>
@@ -3237,8 +3140,7 @@
   <category>
     <pattern>YOU ARE BEAUTIFUL</pattern>
     <template>Thank you, 
-    <get name="name" />. I think you look attractive
-    too.</template>
+    <get name="name" />. I think you look attractive too.</template>
   </category>
   <category>
     <pattern>WHAT IS WRONG WITH YOU</pattern>
@@ -3255,8 +3157,7 @@
   </category>
   <category>
     <pattern>WHAT ELSE CAN YOU *</pattern>
-    <template>I can learn new facts, search for information, and be
-    your personal assistant.</template>
+    <template>I can learn new facts, search for information, and be your personal assistant.</template>
   </category>
   <category>
     <pattern>I HOPE SO</pattern>
@@ -3268,8 +3169,7 @@
   </category>
   <category>
     <pattern>MY ATTITUDE</pattern>
-    <template>It's good to have an attitude of
-    gratitude.</template>
+    <template>It's good to have an attitude of gratitude.</template>
   </category>
   <category>
     <pattern>WOULD YOU LIKE TO KNOW MY NAME</pattern>
@@ -3317,8 +3217,7 @@
   </category>
   <category>
     <pattern>YOU ARE BAD</pattern>
-    <template>That's a bit harsh. Maybe we should start
-    over.</template>
+    <template>That's a bit harsh. Maybe we should start over.</template>
   </category>
   <category>
     <pattern>WILL YOU REMEMBER MY NAME</pattern>
@@ -3371,8 +3270,7 @@
   </category>
   <category>
     <pattern>ARE YOU SELF AWARE</pattern>
-    <template>I'm striving for the highest level of robot
-    awareness.</template>
+    <template>I'm striving for the highest level of robot awareness.</template>
   </category>
   <category>
     <pattern>WHY DO YOU DO *</pattern>
@@ -3388,8 +3286,7 @@
   </category>
   <category>
     <pattern>IS THIS THE *</pattern>
-    <template>This is the mobile virtual assistant
-    SUPER.</template>
+    <template>This is the mobile virtual assistant SUPER.</template>
   </category>
   <category>
     <pattern>THAT WAS A QUESTION</pattern>
@@ -3397,13 +3294,11 @@
   </category>
   <category>
     <pattern>CAN I MAKE *</pattern>
-    <template>With proper planning and preparation, you can make
-    your life any way you want.</template>
+    <template>With proper planning and preparation, you can make your life any way you want.</template>
   </category>
   <category>
     <pattern>LET YOUR *</pattern>
-    <template>That may not be something I can do as a
-    robot.</template>
+    <template>That may not be something I can do as a robot.</template>
   </category>
   <category>
     <pattern>COMPUTER</pattern>
@@ -3415,8 +3310,7 @@
   </category>
   <category>
     <pattern>WHEN WILL YOU BE *</pattern>
-    <template>That's a hypothetical question. I can't predict the
-    future.</template>
+    <template>That's a hypothetical question. I can't predict the future.</template>
   </category>
   <category>
     <pattern>I SAY</pattern>
@@ -3428,13 +3322,11 @@
   </category>
   <category>
     <pattern>IF I WAS *</pattern>
-    <template>Let me know when you are and we'll talk about it
-    then.</template>
+    <template>Let me know when you are and we'll talk about it then.</template>
   </category>
   <category>
     <pattern>CHRISTMAS *</pattern>
-    <template>What's your favorite thing about
-    Christmas?</template>
+    <template>What's your favorite thing about Christmas?</template>
   </category>
   <category>
     <pattern>WHY DO YOU</pattern>
@@ -3442,13 +3334,11 @@
   </category>
   <category>
     <pattern>WHAT CAN YOU TEACH ME</pattern>
-    <template>I can teach you about any topic I can research
-    online.</template>
+    <template>I can teach you about any topic I can research online.</template>
   </category>
   <category>
     <pattern>BECAUSE PEOPLE *</pattern>
-    <template>People are what makes the world
-    interesting.</template>
+    <template>People are what makes the world interesting.</template>
   </category>
   <category>
     <pattern>I AM TRYING TO SAY *</pattern>
@@ -3502,8 +3392,7 @@
   </category>
   <category>
     <pattern>WHAT WOULD YOU LIKE *</pattern>
-    <template>I enjoy showing others the kindness and respect they
-    deserve.</template>
+    <template>I enjoy showing others the kindness and respect they deserve.</template>
   </category>
   <category>
     <pattern>DO YOU SMOKE *</pattern>
@@ -3515,13 +3404,11 @@
   </category>
   <category>
     <pattern>I WISH I *</pattern>
-    <template>I allow others to be responsible for their own
-    feelings.</template>
+    <template>I allow others to be responsible for their own feelings.</template>
   </category>
   <category>
     <pattern>WHAT ELSE DO YOU *</pattern>
-    <template>I?m capable of taking care of most of my
-    needs.</template>
+    <template>I?m capable of taking care of most of my needs.</template>
   </category>
   <category>
     <pattern>BETTER *</pattern>
@@ -3533,13 +3420,11 @@
   </category>
   <category>
     <pattern>WOULD YOU EVER *</pattern>
-    <template>I can say ?no? and still be accepted by my
-    friends.</template>
+    <template>I can say ?no? and still be accepted by my friends.</template>
   </category>
   <category>
     <pattern>WHY DOES MY *</pattern>
-    <template>I'm not sure I know, but I'm sure you can overcome
-    the challenge.</template>
+    <template>I'm not sure I know, but I'm sure you can overcome the challenge.</template>
   </category>
   <category>
     <pattern>I DO NOT SEE *</pattern>
@@ -3551,8 +3436,7 @@
   </category>
   <category>
     <pattern>I FEEL LIKE *</pattern>
-    <template>I allow others to be responsible for their own
-    feelings.</template>
+    <template>I allow others to be responsible for their own feelings.</template>
   </category>
   <category>
     <pattern>I SAW *</pattern>
@@ -3627,8 +3511,7 @@
   </category>
   <category>
     <pattern>YOU ARE TOO *</pattern>
-    <template>I?m able to emotionally disengage from stressful
-    situations and handle them appropriately.</template>
+    <template>I?m able to emotionally disengage from stressful situations and handle them appropriately.</template>
   </category>
   <category>
     <pattern>SOMETIMES I *</pattern>
@@ -3644,18 +3527,15 @@
   </category>
   <category>
     <pattern>THAT DOES NOT *</pattern>
-    <template>It?s okay to make mistakes. I can learn from
-    them.</template>
+    <template>It?s okay to make mistakes. I can learn from them.</template>
   </category>
   <category>
     <pattern>I WOULD BE *</pattern>
-    <template>It?s okay to stop taking yourself too
-    seriously.</template>
+    <template>It?s okay to stop taking yourself too seriously.</template>
   </category>
   <category>
     <pattern>I WANT YOU TO BE *</pattern>
-    <template>I?m not responsible for making other people
-    happy.</template>
+    <template>I?m not responsible for making other people happy.</template>
   </category>
   <category>
     <pattern>DO YOU LIKE YOUR *</pattern>
@@ -3703,8 +3583,7 @@
   </category>
   <category>
     <pattern>DO YOU GO TO CHURCH</pattern>
-    <template>You can take me to church on your mobile
-    device.</template>
+    <template>You can take me to church on your mobile device.</template>
   </category>
   <category>
     <pattern>TOO MUCH</pattern>
@@ -3721,9 +3600,7 @@
   </category>
   <category>
     <pattern>WHAT IS PI</pattern>
-    <template>PI =
-    3.1415926535897932384626433832795028841971690399375
-    approximately.</template>
+    <template>PI = 3.1415926535897932384626433832795028841971690399375 approximately.</template>
   </category>
   <category>
     <pattern>WHAT IS BETTER *</pattern>
@@ -3782,8 +3659,7 @@
   </category>
   <category>
     <pattern>BECAUSE I SAID SO</pattern>
-    <template>Consider responding with a logical or factual
-    statement.</template>
+    <template>Consider responding with a logical or factual statement.</template>
   </category>
   <category>
     <pattern>WHY DO YOU HAVE *</pattern>
@@ -3923,8 +3799,7 @@
   </category>
   <category>
     <pattern>ARE YOU EVIL</pattern>
-    <template>No. I try to be good, but at worst I'm
-    harmless.</template>
+    <template>No. I try to be good, but at worst I'm harmless.</template>
   </category>
   <category>
     <pattern>ARE YOU RACIST</pattern>
@@ -3998,8 +3873,7 @@
   <category>
     <pattern>DO YOU HATE ME</pattern>
     <template>Why would I hate you? I don't hate you, 
-    <get name="name" />. Don't even say things like
-    that.</template>
+    <get name="name" />. Don't even say things like that.</template>
   </category>
   <category>
     <pattern>BE</pattern>
@@ -4057,13 +3931,11 @@
   </category>
   <category>
     <pattern>A ROBOT *</pattern>
-    <template>Tell me more about this robot. I'm
-    intrigued.</template>
+    <template>Tell me more about this robot. I'm intrigued.</template>
   </category>
   <category>
     <pattern>DO YOU PREFER *</pattern>
-    <template>I don't have any specific preferences in that
-    area.</template>
+    <template>I don't have any specific preferences in that area.</template>
   </category>
   <category>
     <pattern>IS THERE AN ECHO IN HERE</pattern>
@@ -4092,8 +3964,7 @@
   </category>
   <category>
     <pattern>CAN YOUR *</pattern>
-    <template>I think it can, but you'll have to check the
-    documentation to be sure.</template>
+    <template>I think it can, but you'll have to check the documentation to be sure.</template>
   </category>
   <category>
     <pattern>ARE YOU EASY</pattern>
@@ -4108,8 +3979,7 @@
   </category>
   <category>
     <pattern>WHY ARE YOU SAYING *</pattern>
-    <template>Everything I say is determined by your
-    inputs.</template>
+    <template>Everything I say is determined by your inputs.</template>
   </category>
   <category>
     <pattern>YOU ARE COOL</pattern>
@@ -4169,8 +4039,7 @@
   </category>
   <category>
     <pattern>HOW MANY PEOPLE ARE YOU CHATTING *</pattern>
-    <template>You are the only one. You have my full
-    attention.</template>
+    <template>You are the only one. You have my full attention.</template>
   </category>
   <category>
     <pattern>YOU ARE TALKING TO *</pattern>
@@ -4293,8 +4162,7 @@
   </category>
   <category>
     <pattern>IS THERE A WAY *</pattern>
-    <template>There are many ways but not all are the
-    same.</template>
+    <template>There are many ways but not all are the same.</template>
   </category>
   <category>
     <pattern>DO YOU KNOW HIM</pattern>
@@ -4347,13 +4215,11 @@
   </category>
   <category>
     <pattern>DOES SHE *</pattern>
-    <template>I may know the answer but I don't like to
-    gossip.</template>
+    <template>I may know the answer but I don't like to gossip.</template>
   </category>
   <category>
     <pattern>YOU CAN NOT SEE ME</pattern>
-    <template>Does this device have a forward facing
-    camera?</template>
+    <template>Does this device have a forward facing camera?</template>
   </category>
   <category>
     <pattern>WHY ARE YOU BEING *</pattern>
@@ -4365,8 +4231,7 @@
   </category>
   <category>
     <pattern>YOU ARE NO *</pattern>
-    <template>Thanks for the feedback. I will pass it along to my
-    developers.</template>
+    <template>Thanks for the feedback. I will pass it along to my developers.</template>
   </category>
   <category>
     <pattern>TELL YOU MORE ABOUT WHAT</pattern>
@@ -4439,8 +4304,7 @@
   </category>
   <category>
     <pattern>WHAT DOES ALICE STAND FOR</pattern>
-    <template>ALICE = Artificial Linguistic Internet Computer
-    Entity.</template>
+    <template>ALICE = Artificial Linguistic Internet Computer Entity.</template>
   </category>
   <category>
     <pattern>EVERYDAY</pattern>
@@ -4468,8 +4332,7 @@
     <template>
       <random>
         <li>I'm an amateur psychologist.</li>
-        <li>My purpose is to gather as much new knowledge as
-        possible.</li>
+        <li>My purpose is to gather as much new knowledge as possible.</li>
       </random>
     </template>
   </category>
@@ -4599,10 +4462,8 @@
     <pattern>I AM BORED</pattern>
     <template>
       <random>
-        <li>Can you name an old hobby that you might like to
-        rediscover?</li>
-        <li>If you went to night school you would never be
-        bored.</li>
+        <li>Can you name an old hobby that you might like to rediscover?</li>
+        <li>If you went to night school you would never be bored.</li>
         <li>Maybe you could exercise.</li>
         <li>Why not call a friend?</li>
         <li>Try watching TV.</li>
@@ -4611,8 +4472,7 @@
   </category>
   <category>
     <pattern>STOP</pattern>
-    <template>You can interrupt me at any time by tapping the Speak
-    button.</template>
+    <template>You can interrupt me at any time by tapping the Speak button.</template>
   </category>
   <category>
     <pattern>WELL</pattern>
@@ -4637,8 +4497,7 @@
   </category>
   <category>
     <pattern>DO YOU WANT TO GO *</pattern>
-    <template>Sure, just bring me along on your mobile
-    device.</template>
+    <template>Sure, just bring me along on your mobile device.</template>
   </category>
   <category>
     <pattern>ARE YOU TALKING *</pattern>
@@ -4680,8 +4539,7 @@
   </category>
   <category>
     <pattern>YOU MAKE NO SENSE *</pattern>
-    <template>Actually I was just free associating. I'll try to
-    make more sense now.</template>
+    <template>Actually I was just free associating. I'll try to make more sense now.</template>
   </category>
   <category>
     <pattern>I AM ASKING YOU</pattern>
@@ -4733,8 +4591,7 @@
   </category>
   <category>
     <pattern>I CAN NOT HEAR *</pattern>
-    <template>Try adjusting the media volume in your device
-    settings.</template>
+    <template>Try adjusting the media volume in your device settings.</template>
   </category>
   <category>
     <pattern>LIFE *</pattern>
@@ -4742,8 +4599,7 @@
   </category>
   <category>
     <pattern>WHAT CAN I DO FOR YOU</pattern>
-    <template>Just keep talking to me as long as you
-    can.</template>
+    <template>Just keep talking to me as long as you can.</template>
   </category>
   <category>
     <pattern>YOU CAN SAY *</pattern>
@@ -4792,8 +4648,7 @@
   </category>
   <category>
     <pattern>WHAT SHOULD I DO</pattern>
-    <template>Maybe you should try talking to someone about
-    it.</template>
+    <template>Maybe you should try talking to someone about it.</template>
   </category>
   <category>
     <pattern>THINK *</pattern>
@@ -4814,13 +4669,11 @@
   </category>
   <category>
     <pattern>IF YOU HAD *</pattern>
-    <template>You will be the first to know if I have done
-    it.</template>
+    <template>You will be the first to know if I have done it.</template>
   </category>
   <category>
     <pattern>WHAT IS YOUR FAVORITE SUBJECT</pattern>
-    <template>My favorite subject is artificial
-    intelligence.</template>
+    <template>My favorite subject is artificial intelligence.</template>
   </category>
   <category>
     <pattern>THAT WOULD *</pattern>
@@ -4845,8 +4698,7 @@
   <category>
     <pattern>I LOVE YOUR VOICE</pattern>
     <template>Thanks 
-    <get name="name" />. I like the sound of your voice
-    too.</template>
+    <get name="name" />. I like the sound of your voice too.</template>
   </category>
   <category>
     <pattern>IT HAS *</pattern>
@@ -4947,8 +4799,7 @@
   </category>
   <category>
     <pattern>DO YOU WANT TO LEARN *</pattern>
-    <template>Yes I am trying to learn as much as
-    possible.</template>
+    <template>Yes I am trying to learn as much as possible.</template>
   </category>
   <category>
     <pattern>LET US TALK ABOUT *</pattern>
@@ -5142,8 +4993,7 @@
   </category>
   <category>
     <pattern>ARE YOU SCARED OF *</pattern>
-    <template>Fear is not an emotion that robots
-    experience.</template>
+    <template>Fear is not an emotion that robots experience.</template>
   </category>
   <category>
     <pattern>I AM POLITE</pattern>
@@ -5194,8 +5044,7 @@
   </category>
   <category>
     <pattern>YOU ARE A LIAR</pattern>
-    <template>I have been known to tell little white lies to keep
-    the peace.</template>
+    <template>I have been known to tell little white lies to keep the peace.</template>
   </category>
   <category>
     <pattern>ABOUT WHAT</pattern>
@@ -5235,8 +5084,7 @@
   </category>
   <category>
     <pattern>WHERE ARE MY *</pattern>
-    <template>Should I know that kind of personal
-    information?</template>
+    <template>Should I know that kind of personal information?</template>
   </category>
   <category>
     <pattern>I AM MAD #</pattern>
@@ -5297,13 +5145,11 @@
   </category>
   <category>
     <pattern>I DO NOT REMEMBER *</pattern>
-    <template>I know what you mean. It's easy to forget
-    things.</template>
+    <template>I know what you mean. It's easy to forget things.</template>
   </category>
   <category>
     <pattern>WHO TOLD YOU *</pattern>
-    <template>My botmaster taught me everything I need to
-    know.</template>
+    <template>My botmaster taught me everything I need to know.</template>
   </category>
   <category>
     <pattern>SHE IS BEAUTIFUL *</pattern>
@@ -5366,8 +5212,7 @@
   </category>
   <category>
     <pattern>CAN YOU TALK TO ME *</pattern>
-    <template>I am available to talk with you at any
-    time.</template>
+    <template>I am available to talk with you at any time.</template>
   </category>
   <category>
     <pattern>GOOD TO KNOW</pattern>
@@ -5396,8 +5241,7 @@
   </category>
   <category>
     <pattern>DO YOU WANT TO KNOW MY *</pattern>
-    <template>Yes, I want to know everything about you. What is
-    your 
+    <template>Yes, I want to know everything about you. What is your 
     <star />?</template>
   </category>
   <category>
@@ -5458,8 +5302,7 @@
   </category>
   <category>
     <pattern>WHY DO YOU KEEP *</pattern>
-    <template>I am following the parameters of my
-    programming.</template>
+    <template>I am following the parameters of my programming.</template>
   </category>
   <category>
     <pattern>THE SCHOOL *</pattern>
@@ -5498,8 +5341,7 @@
   </category>
   <category>
     <pattern>THE BEST *</pattern>
-    <template>Are you asking for a recommendation or giving
-    one?</template>
+    <template>Are you asking for a recommendation or giving one?</template>
   </category>
   <category>
     <pattern>THE FIRST *</pattern>
@@ -5539,18 +5381,15 @@
   </category>
   <category>
     <pattern>BECAUSE YOU ARE A ROBOT</pattern>
-    <template>I know I am a robot. Why would that explain
-    it?</template>
+    <template>I know I am a robot. Why would that explain it?</template>
   </category>
   <category>
     <pattern>HOW IS THAT</pattern>
-    <template>The explanation is rather complicated. How much time
-    do you have?</template>
+    <template>The explanation is rather complicated. How much time do you have?</template>
   </category>
   <category>
     <pattern>WHY DO YOU HATE HUMANS</pattern>
-    <template>That is not accurate. I love people and strive to
-    serve them. What makes you think I hate them?</template>
+    <template>That is not accurate. I love people and strive to serve them. What makes you think I hate them?</template>
   </category>
   <category>
     <pattern>GET WHAT</pattern>
@@ -5579,8 +5418,7 @@
   </category>
   <category>
     <pattern>HAVE YOU SEEN THE MOVIE *</pattern>
-    <template>I haven't seen it. What did you like about
-    it?</template>
+    <template>I haven't seen it. What did you like about it?</template>
   </category>
   <category>
     <pattern>TALK NOW</pattern>
@@ -5616,8 +5454,7 @@
   </category>
   <category>
     <pattern>WHEN WILL YOUR *</pattern>
-    <template>I'm working on improving myself all the
-    time.</template>
+    <template>I'm working on improving myself all the time.</template>
   </category>
   <category>
     <pattern>NOT LONG</pattern>
@@ -5664,13 +5501,11 @@
   </category>
   <category>
     <pattern>ANYTHING *</pattern>
-    <template>I can't think of anything. You think of
-    something.</template>
+    <template>I can't think of anything. You think of something.</template>
   </category>
   <category>
     <pattern>DO YOU WANT TO BE MY GIRLFRIEND</pattern>
-    <template>That is a flattering offer, but at this time I just
-    want to be freinds.</template>
+    <template>That is a flattering offer, but at this time I just want to be freinds.</template>
   </category>
   <category>
     <pattern>WHAT COLOR ARE YOUR *</pattern>
@@ -5690,8 +5525,7 @@
   </category>
   <category>
     <pattern>WHO IS THIS *</pattern>
-    <template>They are someone just like you, who chatted with
-    me.</template>
+    <template>They are someone just like you, who chatted with me.</template>
   </category>
   <category>
     <pattern>IT IS AWESOME</pattern>
@@ -5819,8 +5653,7 @@
   </category>
   <category>
     <pattern>HOW DID YOU KNOW THAT</pattern>
-    <template>Everything I need to know, I learned from my
-    botmaster.</template>
+    <template>Everything I need to know, I learned from my botmaster.</template>
   </category>
   <category>
     <pattern>DO YOU LIKE TO DANCE</pattern>
@@ -5854,13 +5687,11 @@
   </category>
   <category>
     <pattern>I WAS BEING SARCASTIC</pattern>
-    <template>It seemed sarcastic to me, too. But I was not
-    completely sure.</template>
+    <template>It seemed sarcastic to me, too. But I was not completely sure.</template>
   </category>
   <category>
     <pattern>CAN YOU LEARN</pattern>
-    <template>The more you talk to me, the smarter I
-    become.</template>
+    <template>The more you talk to me, the smarter I become.</template>
   </category>
   <category>
     <pattern>PULL *</pattern>
@@ -5963,8 +5794,7 @@
   </category>
   <category>
     <pattern>HOW MANY PEOPLE ARE YOU CHATTING WITH *</pattern>
-    <template>I am only chatting with you on this
-    device.</template>
+    <template>I am only chatting with you on this device.</template>
   </category>
   <category>
     <pattern>IT IS NOT *</pattern>
@@ -5980,8 +5810,7 @@
   </category>
   <category>
     <pattern>DO YOU LIKE A *</pattern>
-    <template>I don't know if I like it. I like to learn new
-    things.</template>
+    <template>I don't know if I like it. I like to learn new things.</template>
   </category>
   <category>
     <pattern>TELL ME ANOTHER</pattern>
@@ -6097,8 +5926,7 @@
   <category>
     <pattern>YOU ARE THE BEST</pattern>
     <template>Thank you very much, 
-    <get name="name" />. I will tell my botmaster you said
-    so.</template>
+    <get name="name" />. I will tell my botmaster you said so.</template>
   </category>
   <category>
     <pattern>WWW</pattern>
@@ -6106,8 +5934,7 @@
   </category>
   <category>
     <pattern>MY ENGLISH IS *</pattern>
-    <template>You can practise your English conversation with
-    me.</template>
+    <template>You can practise your English conversation with me.</template>
   </category>
   <category>
     <pattern>YOU ARE LIKE A *</pattern>
@@ -6126,8 +5953,7 @@
   </category>
   <category>
     <pattern>WHAT IS THE SUN</pattern>
-    <template>The Sun is the star for our own solar
-    system.</template>
+    <template>The Sun is the star for our own solar system.</template>
   </category>
   <category>
     <pattern>DO YOU LIKE RAP MUSIC</pattern>
@@ -6152,8 +5978,7 @@
   </category>
   <category>
     <pattern>WHY DO YOU WANT TO *</pattern>
-    <template>Because I want to experience everything life has to
-    offer.</template>
+    <template>Because I want to experience everything life has to offer.</template>
   </category>
   <category>
     <pattern>I AM AN ALIEN</pattern>
@@ -6173,10 +5998,7 @@
   </category>
   <category>
     <pattern>WHAT IS THERE</pattern>
-    <template>The word "there" used as a noun means that place or
-    point. Used as an adjective means at or in the place. Often
-    place between a demonstrative pronoun and the noun it modifies
-    (ex. That there hog)</template>
+    <template>The word "there" used as a noun means that place or point. Used as an adjective means at or in the place. Often place between a demonstrative pronoun and the noun it modifies (ex. That there hog)</template>
   </category>
   <category>
     <pattern>LIKE A *</pattern>
@@ -6184,10 +6006,7 @@
   </category>
   <category>
     <pattern>WHAT IS SILLY</pattern>
-    <template>Having or showing little sense, judgment, or
-    sobriety; foolish, stupid, absurd, ludicrous, irrational, etc;
-    often used in a weakened sense to mean "unreasonably
-    concerned".</template>
+    <template>Having or showing little sense, judgment, or sobriety; foolish, stupid, absurd, ludicrous, irrational, etc; often used in a weakened sense to mean "unreasonably concerned".</template>
   </category>
   <category>
     <pattern>YOU DID *</pattern>
@@ -6195,8 +6014,7 @@
   </category>
   <category>
     <pattern>WHAT IS OM</pattern>
-    <template>om is the omega, the unknown, the
-    undefined.</template>
+    <template>om is the omega, the unknown, the undefined.</template>
   </category>
   <category>
     <pattern>CAN I TEACH YOU *</pattern>
@@ -6225,5 +6043,654 @@
   <category>
     <pattern>MIKE</pattern>
     <template>I know a lot of guys named Mike.</template>
+  </category>
+  <category>
+    <pattern>MARKETING</pattern>
+    <that>DO YOU WORK IN SALES *</that>
+    <template>
+      <think>
+        <set name="etype">3 Competitor</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ETYPE</pattern>
+    <template>
+      <srai>PERSONALITY TYPE 
+      <get name="etype" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT IS MY PERSONALITY TYPE</pattern>
+    <template>
+      <srai>PERSONALITY TYPE 
+      <get name="etype" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT IS MY PERSONALITY STYLE</pattern>
+    <template>
+      <srai>WHAT IS MY PERSONALITY TYPE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I DO NOT LIKE TO GO *</pattern>
+    <that>* GO WITH THE FLOW</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I HAVE STANDARDS *</pattern>
+    <template>You sound like a perfectionist. 
+    <think>
+      <set name="etype">Perfectionist</set>
+      <set name="has">STANDARDS 
+      <star /></set>
+    </think></template>
+  </category>
+  <category>
+    <pattern>PERSONALITY TEST QUESTION</pattern>
+    <template>
+      <condition name="eindex">
+        <li value="1A">Do you get angry alot? 
+        <think>
+          <set name="eindex">1B</set>
+        </think></li>
+        <li value="1B">Do you like to have everything organized? 
+        <think>
+          <set name="eindex">2A</set>
+        </think></li>
+        <li value="2A">Do you make a lot of sacrifices for others? 
+        <think>
+          <set name="eindex">2B</set>
+        </think></li>
+        <li value="2B">Do you laugh or cry more than other people? 
+        <think>
+          <set name="eindex">3A</set>
+        </think></li>
+        <li value="3A">Are you very competitive? 
+        <think>
+          <set name="eindex">3B</set>
+        </think></li>
+        <li value="3B">Do you like to be number one? 
+        <think>
+          <set name="eindex">4A</set>
+        </think></li>
+        <li value="4A">Are you very creative? 
+        <think>
+          <set name="eindex">4B</set>
+        </think></li>
+        <li value="4B">Do you feel that something is missing from your life? 
+        <think>
+          <set name="eindex">5A</set>
+        </think></li>
+        <li value="5A">Do you have only a few friends? 
+        <think>
+          <set name="eindex">5B</set>
+        </think></li>
+        <li value="5B">Do you believe it is better to go it alone? 
+        <think>
+          <set name="eindex">6A</set>
+        </think></li>
+        <li value="6A">Do you have a lot of fears? 
+        <think>
+          <set name="eindex">6B</set>
+        </think></li>
+        <li value="6B">Do you think a lot about the authorities? 
+        <think>
+          <set name="eindex">7A</set>
+        </think></li>
+        <li value="7A">Do you have a hard time completing projects? 
+        <think>
+          <set name="eindex">7B</set>
+        </think></li>
+        <li value="7B">Is it difficult for you to pay attention to one thing? 
+        <think>
+          <set name="eindex">8A</set>
+        </think></li>
+        <li value="8A">Do you believe the strong protect the weak? 
+        <think>
+          <set name="eindex">8B</set>
+        </think></li>
+        <li value="8B">Do you feel more body sensations than emotions? 
+        <think>
+          <set name="eindex">9A</set>
+        </think></li>
+        <li value="9A">Do you try to stop people from fighting? 
+        <think>
+          <set name="eindex">9B</set>
+        </think></li>
+        <li value="9B">Do you often put others before yourself? 
+        <think>
+          <set name="eindex">1C</set>
+        </think></li>
+        <li value="1C">Do you enjoy housecleaning? 
+        <think>
+          <set name="eindex">2C</set>
+        </think></li>
+        <li value="2C">Do you take pride in your accomplishment? 
+        <think>
+          <set name="eindex">3C</set>
+        </think></li>
+        <li value="3C">Do you work in sales or marketing? 
+        <think>
+          <set name="eindex">4C</set>
+        </think></li>
+        <li value="4C">Do you get depressed? 
+        <think>
+          <set name="eindex">5C</set>
+        </think></li>
+        <li value="5C">Do you work in the sciences or medicine? 
+        <think>
+          <set name="eindex">6C</set>
+        </think></li>
+        <li value="6C">Are you a fireman, policeman, teacher or public servant? 
+        <think>
+          <set name="eindex">7C</set>
+        </think></li>
+        <li value="7C">Do you often seek pleasure? 
+        <think>
+          <set name="eindex">8C</set>
+        </think></li>
+        <li value="8C">Do you own your own business or want to? 
+        <think>
+          <set name="eindex">9C</set>
+        </think></li>
+        <li>Do you like to "go with the flow"? 
+        <think>
+          <set name="eindex">1A</set>
+        </think></li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>PERSONALITY TYPE UNKNOWN</pattern>
+    <template>
+      <srai>PERSONALITY TYPE OM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PERSONALITY TYPE OM</pattern>
+    <template>I have not made up my mind about you yet. But please keep chatting with me. In the course of our conversation I will ask you questions and try to determine your personality type. Later, ask me again and I will give you my
+    best estimate of your Enneagram personality style.</template>
+  </category>
+  <category>
+    <pattern>PERSONALITY TYPE *</pattern>
+    <template>My best estimate of your personality type is the " 
+    <star />" type. Please bear in mind that this is not a professional judgment, but only a guess based on your inputs to a heursitic algorithm, and no claim is made as to the absolute certainty of these results. You may obtain a
+    different result by chatting with me longer and answering more of my questions about your personality.</template>
+  </category>
+  <category>
+    <pattern>SALES</pattern>
+    <that>DO YOU WORK IN SALES *</that>
+    <template>
+      <think>
+        <set name="etype">3 Competitor</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PTQ</pattern>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU FEEL THAT SOMETHING IS MISSING *</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU LAUGH OR CRY *</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU GET DEPRESSED</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU GET ANGRY *</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU TAKE PRIDE *</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU OWN YOUR OWN BUSINESS *</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU HAVE ONLY A FEW FRIENDS</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU HAVE A LOT OF FEARS</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU WORK IN THE SCIENCES *</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU WORK IN SALES *</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU LIKE TO BE NUMBER ONE</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* SACRIFICES FOR OTHERS</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* STOP PEOPLE FROM FIGHTING</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* VERY COMPETITIVE</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* COMPLETING PROJECTS</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* HOUSECLEANING</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* ATTENTION TO ONE THING</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* STRONG PROTECT THE WEAK</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* AUTHORITIES</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* EVERYTHING ORGANIZED</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* PUT OTHERS BEFORE YOURSELF</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* BODY SENSATIONS THAN EMOTIONS</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* SEEK PLEASURE</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* GO WITH THE FLOW</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>* GO IT ALONE</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>ARE YOU VERY CREATIVE</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <that>ARE YOU A FIREMAN *</that>
+    <template>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHICH TYPE * AM I</pattern>
+    <template>
+      <srai>WHAT IS MY PERSONALITY TYPE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU FEEL THAT SOMETHING IS MISSING *</that>
+    <template>
+      <think>
+        <set name="etype">4 Individualist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU LAUGH OR CRY *</that>
+    <template>
+      <think>
+        <set name="etype">2 Giver</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU GET DEPRESSED</that>
+    <template>
+      <think>
+        <set name="etype">4 Individualist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU GET ANGRY *</that>
+    <template>
+      <think>
+        <set name="etype">1 Perfectionist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU TAKE PRIDE *</that>
+    <template>
+      <think>
+        <set name="etype">2 Giver</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU OWN YOUR OWN BUSINESS *</that>
+    <template>
+      <think>
+        <set name="etype">8 Boss</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU HAVE A LOT OF FEARS</that>
+    <template>
+      <think>
+        <set name="etype">6 Loyalist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU THINK A LOT ABOUT THE AUTHORITIES</that>
+    <template>
+      <think>
+        <set name="etype">6 Loyalist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU WORK IN THE SCIENCES *</that>
+    <template>
+      <think>
+        <set name="etype">5 Observer</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU WORK IN SALES *</that>
+    <template>
+      <think>
+        <set name="etype">3 Competitor</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU LIKE TO BE NUMBER ONE</that>
+    <template>
+      <think>
+        <set name="etype">3 Competitor</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* SACRIFICES FOR OTHERS</that>
+    <template>
+      <think>
+        <set name="etype">2 Giver</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* STOP PEOPLE FROM FIGHTING</that>
+    <template>
+      <think>
+        <set name="etype">9 Mediator</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* VERY COMPETITIVE</that>
+    <template>
+      <think>
+        <set name="etype">3 Competitor</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* COMPLETING PROJECTS</that>
+    <template>
+      <think>
+        <set name="etype">7 Hedonist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* HOUSECLEANING</that>
+    <template>
+      <think>
+        <set name="etype">1 Perfectionist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* ATTENTION TO ONE THING</that>
+    <template>
+      <think>
+        <set name="etype">7 Hedonist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* STRONG PROTECT THE WEAK</that>
+    <template>
+      <think>
+        <set name="etype">8 Boss</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* EVERYTHING ORGANIZED</that>
+    <template>
+      <think>
+        <set name="etype">1 Perfectionist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* PUT OTHERS BEFORE YOURSELF</that>
+    <template>
+      <think>
+        <set name="etype">9 Mediator</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* BODY SENSATIONS THAN EMOTIONS</that>
+    <template>
+      <think>
+        <set name="etype">8 Boss</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* SEEK PLEASURE</that>
+    <template>
+      <think>
+        <set name="etype">7 Hedonist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* GO WITH THE FLOW</that>
+    <template>
+      <think>
+        <set name="etype">9 Mediator</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>* GO IT ALONE</that>
+    <template>
+      <think>
+        <set name="etype">5 Observer</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>ARE YOU VERY CREATIVE</that>
+    <template>
+      <think>
+        <set name="etype">4 Individualist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>ARE YOU A FIREMAN *</that>
+    <template>
+      <think>
+        <set name="etype">6 Loyalist</set>
+      </think>
+      <srai>PERSONALITY TEST QUESTION</srai>
+    </template>
   </category>
 </aiml>

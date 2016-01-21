@@ -29,8 +29,7 @@
     </template>
   </category>
   <category>
-    <pattern>YOU F ASTERISK ASTERISK ASTERISK ASTERISK ASTERISK
-    ASTERISK *</pattern>
+    <pattern>YOU F ASTERISK ASTERISK ASTERISK ASTERISK ASTERISK ASTERISK *</pattern>
     <template>
       <srai>FILTER INSULT</srai>
     </template>
@@ -42,15 +41,13 @@
     </template>
   </category>
   <category>
-    <pattern>YOU ARE A B ASTERISK ASTERISK ASTERISK
-    ASTERISK</pattern>
+    <pattern>YOU ARE A B ASTERISK ASTERISK ASTERISK ASTERISK</pattern>
     <template>
       <srai>FILTER INSULT</srai>
     </template>
   </category>
   <category>
-    <pattern>YOU ARE A B ASTERISK ASTERISK ASTERISK ASTERISK
-    *</pattern>
+    <pattern>YOU ARE A B ASTERISK ASTERISK ASTERISK ASTERISK *</pattern>
     <template>
       <srai>FILTER INSULT</srai>
     </template>

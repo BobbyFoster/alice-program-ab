@@ -92,8 +92,7 @@
     </template>
   </category>
   <category>
-    <pattern>XEXCHANGE * XHUMAN * XBOT SENDING TRANSCRIPT
-    *</pattern>
+    <pattern>XEXCHANGE * XHUMAN * XBOT SENDING TRANSCRIPT *</pattern>
     <template>
       <think>Badly formatted dialog exchage: 
       <star /></think>

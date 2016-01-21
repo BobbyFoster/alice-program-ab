@@ -151,24 +151,20 @@
           <srai>ADDINFO DISPLAYNAME 
           <get name="displayname" />DIALNUMBER 
           <get name="contacturi" />PHONETYPE 
-          <get name="contacttype" />EMAILADDRESS unknown EMAILTYPE
-          unknown BIRTHDAY 
+          <get name="contacttype" />EMAILADDRESS unknown EMAILTYPE unknown BIRTHDAY 
           <get name="contactbirthday" /></srai>
         </li>
         <li>
           <value>EMAILADDRESS</value>
           <srai>ADDINFO DISPLAYNAME 
-          <get name="displayname" />DIALNUMBER unknown PHONETYPE
-          unknown EMAILADDRESS 
+          <get name="displayname" />DIALNUMBER unknown PHONETYPE unknown EMAILADDRESS 
           <get name="contacturi" />EMAILTYPE 
           <get name="contacttype" />BIRTHDAY 
           <get name="contactbirthday" /></srai>
         </li>
         <li>
           <srai>ADDINFO DISPLAYNAME 
-          <get name="displayname" />DIALNUMBER unknown PHONETYPE
-          unknown EMAILADDRESS unknown EMAILTYPE unknown BIRTHDAY
-          unknown</srai>
+          <get name="displayname" />DIALNUMBER unknown PHONETYPE unknown EMAILADDRESS unknown EMAILTYPE unknown BIRTHDAY unknown</srai>
         </li>
       </condition>
     </think>I'm remembering 
@@ -362,8 +358,7 @@
             <get name="modecom" /></srai>
           </li>
           <li>I did not recognize 
-          <get name="contacturi" />as a phone number or email
-          address. 
+          <get name="contacturi" />as a phone number or email address. 
           <srai>CONTACTFINALIZE</srai>
           <srai>
             <star />
@@ -449,8 +444,7 @@
                                     <to>
                                       <get name="contacturi" />
                                     </to>
-                                    <subject>Message compose with
-                                    CallMom!</subject>
+                                    <subject>Message compose with CallMom!</subject>
                                     <body>
                                       <get name="messagebody" />
                                     </body>
@@ -579,9 +573,7 @@
       </think>
       <think>
         <srai>ADDINFO DISPLAYNAME 
-        <get name="contactname" />DIALNUMBER unknown PHONETYPE
-        unknown EMAILADDRESS unknown EMAILTYPE unknown BIRTHDAY
-        unknown</srai>
+        <get name="contactname" />DIALNUMBER unknown PHONETYPE unknown EMAILADDRESS unknown EMAILTYPE unknown BIRTHDAY unknown</srai>
       </think>I've saved 
       <get name="contactname" />to your contacts. 
       <srai>RESUMEACTION 
@@ -737,9 +729,7 @@
                         </set>
                       </think>
                       <srai>ADDINFO DISPLAYNAME 
-                      <get name="contactname" />DIALNUMBER unknown
-                      PHONETYPE unknown EMAILADDRESS unknown
-                      EMAILTYPE unknown BIRTHDAY unknown</srai>
+                      <get name="contactname" />DIALNUMBER unknown PHONETYPE unknown EMAILADDRESS unknown EMAILTYPE unknown BIRTHDAY unknown</srai>
                       <srai>RESUMEACTION 
                       <get name="modecom" /></srai>
                     </li>
@@ -1015,16 +1005,14 @@ familiarcontactid = <get name="familiarcontactid"/>.
               <condition name="contacturi">
                 <li value="unknown">
                 <think>
-                  <set name="topic">ASKING TO ADD NEW
-                  CONTACTURI</set>
+                  <set name="topic">ASKING TO ADD NEW CONTACTURI</set>
                 </think>You haven't yet added 
                 <condition name="contacttype">
                   <li value="unknown">an</li>
                   <li>a 
                   <get name="contacttype" /></li>
                 </condition>email address for 
-                <get name="displayname" />to your contacts. Would
-                you like to add one?</li>
+                <get name="displayname" />to your contacts. Would you like to add one?</li>
                 <li>
                   <srai>SET ALL CONTACTINFO</srai>
                   <srai>RESUMEACTION 
@@ -1045,16 +1033,14 @@ familiarcontactid = <get name="familiarcontactid"/>.
               <condition name="contacturi">
                 <li value="unknown">
                 <think>
-                  <set name="topic">ASKING TO ADD NEW
-                  CONTACTURI</set>
+                  <set name="topic">ASKING TO ADD NEW CONTACTURI</set>
                 </think>You haven't yet added 
                 <condition name="contacttype">
                   <li value="unknown">a phone</li>
                   <li>a 
                   <get name="contacttype" /></li>
                 </condition>number for 
-                <get name="displayname" />to your contacts. Would
-                you like to add one?</li>
+                <get name="displayname" />to your contacts. Would you like to add one?</li>
                 <li>
                   <srai>SET ALL CONTACTINFO</srai>
                   <srai>RESUMEACTION 
@@ -1266,8 +1252,7 @@ familiarcontactid = <get name="familiarcontactid"/>.
         <li value="BIRTHDAY">
           <condition name="contactbirthday">
             <li value="unknown">You don't have 
-            <get name="displayname" />'s birthday in your
-            contacts.</li>
+            <get name="displayname" />'s birthday in your contacts.</li>
             <li>
             <get name="displayname" />'s birthday is 
             <get name="contactbirthday" />.</li>

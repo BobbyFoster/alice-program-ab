@@ -33,8 +33,7 @@
     </template>
   </category>
   <category>
-    <pattern>ADDINFO DISPLAYNAME * DIALNUMBER * PHONETYPE *
-    EMAILADDRESS * EMAILTYPE * BIRTHDAY *</pattern>
+    <pattern>ADDINFO DISPLAYNAME * DIALNUMBER * PHONETYPE * EMAILADDRESS * EMAILTYPE * BIRTHDAY *</pattern>
     <template>
       <addinfo>
         <displayname>
