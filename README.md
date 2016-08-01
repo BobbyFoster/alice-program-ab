@@ -1,6 +1,5 @@
 # alice-program-ab
-a clone of the archived https://code.google.com/p/program-ab/
-
+Fork of Alice Program-AB. With enhanced build & Web API.
 # Getting Started
 ```
 $ ant
